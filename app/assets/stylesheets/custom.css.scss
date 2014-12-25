@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  font-family: "Helvetica Neue Light";
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
@@ -52,10 +53,10 @@ h2 {
 }
 
 p {
+  font-family: "Helvetica Neue Light";
   font-size: 1.1em;
   line-height: 1.7em;
 }
-
 
 /* header */
 
@@ -67,14 +68,15 @@ p {
 }
 
 #logo {
+  font-family: "Helvetica Neue Light";
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
   color: white;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
-  font-weight: bold;
+  // font-weight: bold;
   line-height: 1;
   &:hover {
     color: white;
@@ -82,9 +84,25 @@ p {
   }
 }
 
+#main {
+  font-family: "Helvetica Neue Light";
+  color: white;
+}
+
+#help {
+  font-family: "Helvetica Neue Light";
+  color: white;
+}
+
+#sign_in {
+  font-family: "Helvetica Neue Light";
+  color: white;
+}
+
 /* footer */
 
 footer {
+  font-family: "Helvetica Neue Light";
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
@@ -106,4 +124,80 @@ footer {
       margin-left: 10px;
     }
   }
+}
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* sidebar */
+
+aside {
+  section {
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
 }

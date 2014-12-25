@@ -20,40 +20,40 @@ describe "Static pages" do
 
   describe "Help page" do
     before { visit help_path }
-    let(:heading)    { 'Help' }
-    let(:page_title) { full_title('Help') }
+    let(:heading)    { 'Довідка' }
+    let(:page_title) { full_title('Довідка') }
 
     it_should_behave_like "all static pages"
   end
 
   describe "About page" do
     before { visit about_path }
-    let(:heading)    { 'About' }
-    let(:page_title) { full_title('About Us') }
+    let(:heading)    { 'Про нас' }
+    let(:page_title) { full_title('Про нас') }
 
     it_should_behave_like "all static pages"
   end
 
   describe "Contact page" do
     before { visit contact_path }
-    let(:heading)    { 'Contact' }
-    let(:page_title) { full_title('Contact') }
+    let(:heading)    { 'Контакти' }
+    let(:page_title) { full_title('Контакти') }
 
     it_should_behave_like "all static pages"
   end
 
   it "should have the right links on the layout" do
     visit root_path
-    click_link "About"
-    expect(page).to have_title(full_title('About Us'))
-    click_link "Help"
-    expect(page).to have_title(full_title('Help'))
-    click_link "Contact"
-    expect(page).to have_title(full_title('Contact'))
-    click_link "Home"
+    click_link "Про нас"
+    expect(page).to have_title(full_title('Про нас'))
+    click_link "Довідка"
+    expect(page).to have_title(full_title('Довідка'))
+    click_link "Контакти"
+    expect(page).to have_title(full_title('Контакти'))
+    click_link "Головна сторінка"
     click_link "Sign up now!"
-    expect(page).to have_title(full_title('Sign Up'))
-    click_link "sample app"
+    expect(page).to have_title(full_title('Зареєструватися'))
+    click_link "Amaterasu"
     expect(page).to have_title(full_title(''))
   end
 end
