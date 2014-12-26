@@ -17,7 +17,8 @@
         <%= f.label :password_confirmation, "Підтвердження паролю" %>
         <%= f.password_field :password_confirmation %>
 
-        <%= f.submit "Створити обліковий запис", class: "btn btn-large btn-primary" %>
+        <%= f.submit "Створити обліковий запис", id: "create_account_button",
+                     class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
 </div>

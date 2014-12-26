@@ -15,10 +15,8 @@
     #
 # See http://rubydoc.individualfo/gems/rspec-core/RSpec/Core/Configuration
 
+require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-
-require 'capybara/rails'
-
 require 'capybara/rspec'
 
 RSpec.configure do |config|

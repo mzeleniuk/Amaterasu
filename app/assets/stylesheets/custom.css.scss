@@ -38,14 +38,14 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-family: "Helvetica Neue Light";
   font-size: 3em;
-  letter-spacing: -2px;
+  // letter-spacing: 1px;
   margin-bottom: 30px;
   text-align: center;
 }
 
 h2 {
+  font-family: "Helvetica Neue Light";
   font-size: 1.2em;
-  letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
@@ -86,17 +86,46 @@ p {
 
 #main {
   font-family: "Helvetica Neue Light";
-  color: white;
 }
 
 #help {
   font-family: "Helvetica Neue Light";
-  color: white;
 }
 
 #sign_in {
   font-family: "Helvetica Neue Light";
-  color: white;
+}
+
+#users {
+  font-family: "Helvetica Neue Light";
+}
+
+#profile {
+  font-family: "Helvetica Neue Light";
+}
+
+#fat-menu {
+  font-family: "Helvetica Neue Light";
+}
+
+#settings {
+  font-family: "Helvetica Neue Light";
+}
+
+#delete {
+  font-family: "Helvetica Neue Light";
+}
+
+#signup_button {
+  font-family: "Helvetica Neue Light";
+}
+
+#create_account_button {
+  font-family: "Helvetica Neue Light";
+}
+
+#signin_button {
+  font-family: "Helvetica Neue Light";
 }
 
 /* footer */
