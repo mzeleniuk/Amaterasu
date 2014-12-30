@@ -8,14 +8,14 @@
           <li><%= link_to "Головна сторінка", root_path, id: "main" %></li>
           <li><%= link_to "Довідка", help_path, id: "help" %></li>
           <% if signed_in? %>
-              <li><%= link_to "Користувачі", '#', id: "users" %></li>
+              <li><%= link_to "Користувачі", users_path, id: "users" %></li>
               <li id="fat-menu" class="dropdown" >
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   Обліковий запис <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
                   <li><%= link_to "Профіль", current_user, id: "profile" %></li>
-                  <li><%= link_to "Налаштування", '#', id: "settings" %></li>
+                  <li><%= link_to "Налаштування", edit_user_path(current_user), id: "settings" %></li>
                   <li class="divider"></li>
                   <li>
                     <%= link_to "Вийти", signout_path, method: "delete", id:"delete" %>

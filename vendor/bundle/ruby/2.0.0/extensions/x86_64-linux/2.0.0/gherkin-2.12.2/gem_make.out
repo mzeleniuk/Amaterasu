@@ -1,0 +1,13 @@
+/home/zell/.rvm/rubies/ruby-2.0.0-p598/bin/ruby -r ./siteconf20141230-4011-39c8fm.rb extconf.rb 
+checking for main() in -lc... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling gherkin_lexer_zh_tw.c
+linking shared-object gherkin_lexer_zh_tw.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 gherkin_lexer_zh_tw.so ./.gem.20141230-4011-yf38z7
+installing default gherkin_lexer_zh_tw libraries
