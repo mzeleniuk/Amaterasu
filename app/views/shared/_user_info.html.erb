@@ -6,5 +6,5 @@
   <%= link_to "Мій профіль", current_user %>
 </span>
 <span>
-  <%= pluralize(current_user.microposts.count, "post") %>
+  <b>Публікацій:</b> <%= current_user.microposts.count %>
 </span>
