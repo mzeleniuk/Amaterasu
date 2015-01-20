@@ -44,7 +44,6 @@ h1 {
     url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
   }
   font-size: 3em;
-  // letter-spacing: 1px;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -90,8 +89,8 @@ p {
 
 #logo_image {
   float: left;
-  height: 40px;
-  width: 40px;
+  height: 38px;
+  width: 38px;
   padding-top: 1px;
 }
 
@@ -99,12 +98,10 @@ p {
   font-family: "Helvetica Neue Light";
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
+  font-size: 2em;
   color: white;
-  // text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
-  // font-weight: bold;
+  padding-top: 6px;
   line-height: 1;
   &:hover {
     color: white;
@@ -272,6 +269,10 @@ p {
   }
 }
 
+#micropost_picture {
+  border: none;
+}
+
 /* footer */
 
 footer {
@@ -435,20 +436,38 @@ input {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
   }
-}
-.content {
-  display: block;
-}
-.timestamp {
-  color: $grayLight;
-}
-.gravatar {
-  float: left;
-  margin-right: 10px;
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $grayLight;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
 }
 aside {
   textarea {
     height: 100px;
     margin-bottom: 5px;
+  }
+}
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
   }
 }

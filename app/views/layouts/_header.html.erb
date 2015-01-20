@@ -6,7 +6,6 @@
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to "Головна сторінка", root_path, id: "main" %></li>
-          <li><%= link_to "Довідка", help_path, id: "help" %></li>
           <% if signed_in? %>
               <li><%= link_to "Користувачі", users_path, id: "users" %></li>
               <li id="fat-menu" class="dropdown" >

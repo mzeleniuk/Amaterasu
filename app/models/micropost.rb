@@ -1,8 +1,10 @@
 class Micropost < ActiveRecord::Base
   belongs_to :user
-  default_scope -> { order('created_at DESC') }
-  validates :content, presence: true, length: { maximum: 140 }
+  default_scope -> { order(created_at: :desc) }
+  mount_uploader :picture, PictureUploader
+  validates :content, presence: true
   validates :user_id, presence: true
+  validate  :picture_size
 
   # Returns microposts from the users being followed by the given user.
   def self.from_users_followed_by(user)
@@ -10,5 +12,14 @@ class Micropost < ActiveRecord::Base
                          WHERE follower_id = :user_id"
     where("user_id IN (#{followed_user_ids}) OR user_id = :user_id",
           user_id: user.id)
+  end
+
+  private
+
+  # Validates the size of an uploaded picture.
+  def picture_size
+    if picture.size > 2.megabytes
+      errors.add(:picture, "should be less than 2 MB")
+    end
   end
 end
