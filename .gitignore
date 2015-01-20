@@ -24,3 +24,4 @@ doc/
 .idea
 .secret
 bundler_stubs/
+/public/uploads/
