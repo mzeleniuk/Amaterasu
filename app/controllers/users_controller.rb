@@ -20,9 +20,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      sign_in @user
-      flash[:success] = "Welcome to the Amaterasu!"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
     else
       render 'new'
     end
@@ -53,7 +53,7 @@ class UsersController < ApplicationController
   def following
     @title = "Ви читаєте"
     @user = User.find(params[:id])
-    @users = @user.followed_users.paginate(page: params[:page])
+    @users = @user.following.paginate(page: params[:page])
     render 'show_follow'
   end
 

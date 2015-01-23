@@ -32,7 +32,7 @@ textarea {
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+  line-height: 1.2;
 }
 
 h1 {
@@ -109,7 +109,7 @@ p {
   }
 }
 
-#main {
+.custom_font {
   @font-face {
     font-family: 'Open Sans';
     font-style: normal;
@@ -119,147 +119,7 @@ p {
   }
 }
 
-#help {
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Light'), local('OpenSans-Light'),
-    url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
-  }
-}
-
-#sign_in {
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Light'), local('OpenSans-Light'),
-    url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
-  }
-}
-
-#users {
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Light'), local('OpenSans-Light'),
-    url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
-  }
-}
-
-#profile {
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Light'), local('OpenSans-Light'),
-    url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
-  }
-}
-
-#fat-menu {
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Light'), local('OpenSans-Light'),
-    url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
-  }
-}
-
-#settings {
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Light'), local('OpenSans-Light'),
-    url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
-  }
-}
-
-#delete {
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Light'), local('OpenSans-Light'),
-    url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
-  }
-}
-
-#signup_button {
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Light'), local('OpenSans-Light'),
-    url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
-  }
-}
-
-#create_account_button {
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Light'), local('OpenSans-Light'),
-    url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
-  }
-}
-
-#signin_button {
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Light'), local('OpenSans-Light'),
-    url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
-  }
-}
-
-#edit_account_button {
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Light'), local('OpenSans-Light'),
-    url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
-  }
-}
-
-#compose {
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Light'), local('OpenSans-Light'),
-    url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
-  }
-}
-
-#post_button {
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Light'), local('OpenSans-Light'),
-    url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
-  }
-}
-
-#follow_button {
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Light'), local('OpenSans-Light'),
-    url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
-  }
-}
-
-#unfollow_button {
+.button_font {
   @font-face {
     font-family: 'Open Sans';
     font-style: normal;
@@ -409,6 +269,18 @@ input {
 .field_with_errors {
   @extend .control-group;
   @extend .error;
+}
+
+.checkbox {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 5px;
+  }
+}
+
+#sign_in_password_field {
+  display: inline-block;
 }
 
 /* Users index */
