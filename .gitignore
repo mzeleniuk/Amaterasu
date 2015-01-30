@@ -11,16 +11,11 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+# Ignore uploaded test images.
+/public/uploads
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-
-# Игнорирование прочих ненужных файлов.
-doc/
-*.swp
-*~
-.project
 .DS_Store
-.idea
-.secret
 bundler_stubs/

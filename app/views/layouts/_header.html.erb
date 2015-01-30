@@ -3,18 +3,26 @@
     <div class="container">
       <%= link_to image_tag("black-flame-vector.png"), root_path, id: "logo_image" %>
       <%= link_to "Amaterasu", root_path, id: "logo" %>
+      <% if signed_in? %>
+          <ul class="nav pull-left" id= "user_name_header">
+            <%= current_user.name %>
+      <% end %>
+      </ul>
       <nav>
         <ul class="nav pull-right custom_font">
-          <li></i><%= link_to '<i class="icon-home icon-white"></i> Головна сторінка'.html_safe, root_path %></li>
+          <li><%= link_to '<i class="icon-home icon-white"></i> Головна сторінка'.html_safe, root_path %></li>
           <% if signed_in? %>
-              <li></i><%= link_to '<i class="icon-search icon-white"></i> Користувачі'.html_safe, users_path %></li>
               <li id="fat-menu" class="dropdown" >
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   Обліковий запис <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
+
                   <li><%= link_to '<i class="icon-user"></i> Профіль'.html_safe, current_user %></li>
                   <li><%= link_to '<i class="icon-edit"></i> Налаштування'.html_safe, edit_user_path(current_user) %></li>
+                  <li class="divider"></li>
+                  <li>
+                  <li><%= link_to '<i class="icon-search"></i> Користувачі'.html_safe, users_path %></li>
                   <li class="divider"></li>
                   <li>
                     <%= link_to '<i class="icon-off"></i> Вийти'.html_safe, signout_path, method: "delete" %>
