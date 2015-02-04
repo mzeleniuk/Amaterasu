@@ -4,7 +4,7 @@
     <section>
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.name %>
+        <%= link_to @user.name, @user %>
       </h1>
       <span><b>Публікацій:</b> <%= @user.microposts.count %></span>
     </section>

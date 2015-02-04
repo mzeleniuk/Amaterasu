@@ -3,8 +3,7 @@
   <aside class="span4">
     <section>
       <%= gravatar_for @user %>
-      <h1><%= @user.name %></h1>
-      <span><%= link_to "Мій профіль", @user %></span>
+      <h1><%= link_to @user.name, @user %></h1>
       <span><b>Публікацій:</b> <%= @user.microposts.count %></span>
     </section>
     <section>

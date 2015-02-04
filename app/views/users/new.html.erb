@@ -5,7 +5,7 @@
     <%= form_for(@user) do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
 
-        <%= f.label :name, "Ім’я користувача" %>
+        <%= f.label :name, "Ім’я користувача (латинськими символами)" %>
         <%= f.text_field :name %>
 
         <%= f.label :email, "Електронна пошта" %>

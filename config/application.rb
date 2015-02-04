@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 # Pick the frameworks you want:
+require 'rails/all'
 require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
@@ -9,10 +10,13 @@ require "sprockets/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(:default, Rails.env)
+Bundler.require(*Rails.groups)
 
 module Amaterasu
   class Application < Rails::Application
+    config.time_zone = 'Kyiv'
+    config.active_record.default_timezone = :local
+
     config.autoload_paths += %W(#{config.root}/lib)
 
     config.action_view.embed_authenticity_token_in_remote_forms = true

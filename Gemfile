@@ -6,11 +6,11 @@ gem 'rails', '4.0.2'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
-gem 'carrierwave',             '0.10.0'
-gem 'mini_magick',             '3.8.0'
-gem 'fog',                     '1.23.0'
+gem 'carrierwave', '0.10.0'
+gem 'mini_magick', '3.8.0'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
+gem 'tzinfo', '0.3.43'
 
 group :development, :test do
   gem 'sqlite3', '1.3.10'
@@ -46,5 +46,5 @@ end
 group :production do
   gem 'pg', '0.17.1'
   gem 'rails_12factor', '0.0.2'
-  gem 'unicorn',        '4.8.3'
+  gem 'unicorn', '4.8.3'
 end

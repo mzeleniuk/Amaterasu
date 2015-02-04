@@ -1,10 +1,7 @@
-<%= link_to gravatar_for(current_user, size: 50), current_user %>
+<%= gravatar_for(current_user, size: 50) %>
 <h1>
-  <%= current_user.name %>
+  <%= link_to current_user.name, current_user %>
 </h1>
-<span>
-  <%= link_to "Мій профіль", current_user %>
-</span>
 <span>
   <b>Публікацій:</b> <%= current_user.microposts.count %>
 </span>
