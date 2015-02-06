@@ -17,7 +17,7 @@
       </div>
     </div>
 <% else %>
-<div class="center hero-unit">
+<div class="row center hero-unit">
   <h1>Вітаємо на Amaterasu!</h1>
 
   <h2>
@@ -27,6 +27,7 @@
 
   <%= link_to "Зареєструватися", signup_path, class: "btn btn-large btn-primary button_font" %>
 </div>
-
-<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+<%= image_tag("Desktop.png", alt: "Desktop") %>
+<%= image_tag("Notebook.png", alt: "Notebook", :size => "300x208") %>
+<%= image_tag("Tablet.png", alt: "Tablet", :size => "220x152") %>
 <% end %>
