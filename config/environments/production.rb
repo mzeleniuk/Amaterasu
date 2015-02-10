@@ -1,4 +1,4 @@
-Amaterasu::Application.configure do
+Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -77,6 +77,9 @@ Amaterasu::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Do not dump schema after migrations.
+  config.active_record.dump_schema_after_migration = false
 
   # Force all access to the app over SSL, use Strict-Transport-Security,
   # and use secure cookies.

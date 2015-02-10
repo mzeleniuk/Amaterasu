@@ -6,16 +6,16 @@
         <%= render 'shared/error_messages', object: f.object %>
 
         <%= f.label :name, "Ім’я користувача (латинськими символами)" %>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, placeholder: "Itachi Uchiha" %>
 
         <%= f.label :email, "Електронна пошта" %>
-        <%= f.text_field :email %>
+        <%= f.text_field :email, placeholder: "user@example.com" %>
 
         <%= f.label :password, "Пароль" %>
-        <%= f.password_field :password %>
+        <%= f.password_field :password, placeholder: "••••••" %>
 
         <%= f.label :password_confirmation, "Підтвердження паролю" %>
-        <%= f.password_field :password_confirmation %>
+        <%= f.password_field :password_confirmation, placeholder: "••••••" %>
 
         <%= f.submit "Створити обліковий запис", class: "btn btn-large btn-block btn-primary button_font" %>
     <% end %>

@@ -90,7 +90,7 @@ p {
 #logo_image {
   float: left;
   height: 38px;
-  width: 38px;
+  width: 198px;
   padding-top: 1px;
 }
 
@@ -107,6 +107,12 @@ p {
     color: white;
     text-decoration: none;
   }
+}
+
+#user_name_header {
+  font-family: "Helvetica Neue Light";
+  color: white;
+  padding: 10px 25px;
 }
 
 .custom_font {
@@ -127,14 +133,6 @@ p {
     src: local('Open Sans Light'), local('OpenSans-Light'),
     url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
   }
-}
-
-#user_name_header {
-  font-family: "Helvetica Neue Light";
-  margin-left: 20%;
-  font-size: 1.2em;
-  color: white;
-  padding-top: 10px;
 }
 
 #micropost_picture {
@@ -284,10 +282,6 @@ input {
   span {
     margin-left: 5px;
   }
-}
-
-#sign_in_password_field {
-  display: inline-block;
 }
 
 /* Users index */
