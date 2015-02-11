@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Rails sample_app: development" uuid="cebfc2d4-8712-4bf5-bfcf-c728d8ea148c" />
-    <data-source name="Rails sample_app: test" uuid="44aa3590-be7b-417b-802f-d01e8afa2bfa" />
-    <data-source name="Rails sample_app: cucumber" uuid="2df5c5ce-b9b2-4caf-908c-f1f919f954cd" />
+    <data-source name="Rails Amaterasu: development" uuid="4e4c7a49-b457-464f-8d56-713c69c28b8f" />
+    <data-source name="Rails Amaterasu: test" uuid="591abf1c-6a9b-4fc3-b3b2-7ab9e11b8131" />
+    <data-source name="Rails Amaterasu: cucumber" uuid="6fc0387e-17d1-4b8d-8077-d0f1ef548f45" />
   </component>
 </project>
