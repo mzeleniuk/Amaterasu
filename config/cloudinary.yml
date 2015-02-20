@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hs92tsnsc
+  api_key: '491454175212467'
+  api_secret: fdviYKTmafl_bFN_lQMzELN3C44
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hs92tsnsc
+  api_key: '491454175212467'
+  api_secret: fdviYKTmafl_bFN_lQMzELN3C44
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hs92tsnsc
+  api_key: '491454175212467'
+  api_secret: fdviYKTmafl_bFN_lQMzELN3C44
+  enhance_image_tag: true
+  static_image_support: false
