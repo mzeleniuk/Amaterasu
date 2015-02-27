@@ -4,23 +4,38 @@
   <div class="span6 offset3">
     <%= form_for(@user) do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#sectionA">Профіль</a></li>
+          <li><a data-toggle="tab" href="#sectionB">Безпека</a></li>
+        </ul>
+        <div class="tab-content">
 
-        <%= f.label :name, "Ім’я користувача" %>
-        <%= f.text_field :name %>
+            <div id="sectionA" class="tab-pane fade in active">
 
-        <%= f.label :email, "Електронна пошта" %>
-        <%= f.text_field :email %>
+                <%= f.label :name, "Ім’я користувача" %>
+                <%= f.text_field :name %>
 
-        <%= f.label :password, "Пароль" %>
-        <%= f.password_field :password, placeholder: "••••••" %>
+                <%= f.label :email, "Електронна пошта" %>
+                <%= f.text_field :email %>
 
-        <%= f.label :password_confirmation, "Підтвердження паролю" %>
-        <%= f.password_field :password_confirmation, placeholder: "••••••" %>
+                <%= f.submit "Зберегти зміни", class: "btn btn-large btn-block btn-primary button_font" %>
+                <br>
 
-        <%= f.submit "Зберегти зміни", class: "btn btn-large btn-block btn-primary button_font" %>
+                <%= gravatar_for(@user) %>
+                <a href="http://gravatar.com/emails" class="btn btn-default">Змінити</a>
+            </div>
+
+            <div id="sectionB" class="tab-pane fade">
+
+                <%= f.label :password, "Пароль" %>
+                <%= f.password_field :password, placeholder: "••••••" %>
+
+                <%= f.label :password_confirmation, "Підтвердження паролю" %>
+                <%= f.password_field :password_confirmation, placeholder: "••••••" %>
+
+                <%= f.submit "Зберегти зміни", class: "btn btn-large btn-block btn-primary button_font" %>
+            </div>
+        </div>
     <% end %>
-
-    <%= gravatar_for(@user) %>
-    <a href="http://gravatar.com/emails" class="btn btn-default">Змінити</a>
   </div>
 </div>
