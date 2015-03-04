@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   before_action :signed_in_user,
                 only: [:index, :edit, :update, :destroy, :following, :followers]
-  before_action :correct_user,   only: [:edit, :update]
-  before_action :admin_user,     only: :destroy
+  before_action :correct_user, only: [:edit, :update]
+  before_action :admin_user, only: :destroy
 
   def index
     @users = User.paginate(page: params[:page]).search(params[:search])
@@ -70,8 +70,6 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :email, :password,
                                  :password_confirmation)
   end
-
-  # Before filters
 
   def correct_user
     @user = User.find(params[:id])

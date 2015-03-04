@@ -218,6 +218,9 @@ aside {
 .gravatar {
   float: left;
   margin-right: 10px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
 }
 
 .stats {

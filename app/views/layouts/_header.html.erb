@@ -6,6 +6,7 @@
         <ul class="nav pull-right custom_font">
           <% if signed_in? %>
               <li id= "user_name_header">
+                <%= gravatar_for(current_user, size: 20) %>
                 <%= current_user.name %>
                 <% end %>
               </li>
