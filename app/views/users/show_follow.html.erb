@@ -2,7 +2,7 @@
 <div class="row">
   <aside class="span4">
     <section>
-      <%= gravatar_for @user %>
+      <%= image_tag(@user.avatar.url, :class => 'avatar') %>
       <h1><%= link_to @user.name, @user %></h1>
       <span><b>Публікацій:</b> <%= @user.microposts.count %></span>
     </section>
@@ -11,7 +11,7 @@
       <% if @users.any? %>
           <div class="user_avatars">
             <% @users.each do |user| %>
-                <%= link_to gravatar_for(user, size: 30), user %>
+                <%= link_to image_tag(user.avatar.url, :class => 'avatar_feed'), user %>
             <% end %>
           </div>
       <% end %>

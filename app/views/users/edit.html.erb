@@ -2,7 +2,7 @@
 <h1>Оновіть дані Вашого профілю</h1>
 <div class="row">
   <div class="span6 offset3">
-    <%= form_for(@user) do |f| %>
+    <%= form_for(@user, :html => { :multipart => true }) do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
         <ul class="nav nav-tabs">
           <li class="active"><a data-toggle="tab" href="#sectionA">Профіль</a></li>
@@ -18,11 +18,11 @@
                 <%= f.label :email, "Електронна пошта" %>
                 <%= f.text_field :email %>
 
-                <%= f.submit "Зберегти зміни", class: "btn btn-large btn-block btn-primary button_font" %>
-                <br>
-
-                <%= gravatar_for(@user) %>
-                <a href="http://gravatar.com/emails" class="btn btn-default">Змінити</a>
+                <%= image_tag(@user.avatar.url, :class => 'avatar', :style => 'margin-bottom: 10px') %>
+                <span class="picture">
+                  <%= f.file_field :avatar, accept: 'image/jpeg, image/gif, image/png' %>
+                </span>
+                <%= f.hidden_field :avatar_cache %>
             </div>
 
             <div id="sectionB" class="tab-pane fade">
@@ -32,10 +32,19 @@
 
                 <%= f.label :password_confirmation, "Підтвердження паролю" %>
                 <%= f.password_field :password_confirmation, placeholder: "••••••" %>
-
-                <%= f.submit "Зберегти зміни", class: "btn btn-large btn-block btn-primary button_font" %>
             </div>
         </div>
+      <%= f.submit "Зберегти зміни", class: 'btn btn-large btn-block btn-primary button_font' %>
     <% end %>
   </div>
 </div>
+
+<script type="text/javascript">
+    $('#user_avatar').bind('change', function() {
+        size_in_megabytes = this.files[0].size/1024/1024;
+        if (size_in_megabytes > 2) {
+            alert('Ви обрали зображення, розмір якого перевищує 2 мегабайти. ' +
+            'Будь ласка, оберіть зображення меншого розміру.');
+        }
+    });
+</script>

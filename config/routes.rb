@@ -1,6 +1,6 @@
 Amaterasu::Application.routes.draw do
-  get "password_resets/new"
-  get "password_resets/edit"
+  get 'password_resets/new'
+  get 'password_resets/edit'
 
   resources :users do
     member do

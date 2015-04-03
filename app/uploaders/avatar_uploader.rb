@@ -1,11 +1,11 @@
 # encoding: utf-8
 
-class PictureUploader < CarrierWave::Uploader::Base
+class AvatarUploader < CarrierWave::Uploader::Base
 
   include Cloudinary::CarrierWave
 
   include CarrierWave::MiniMagick
-  process resize_to_limit: [550, 550]
+  process resize_to_limit: [60, 60]
 
   CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
 
@@ -15,6 +15,10 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  end
+
+  def default_url(*args)
+    ActionController::Base.helpers.asset_path('assets/' + [version_name, 'user_avatar.png'].compact.join('_'))
   end
 
   def extension_white_list

@@ -3,7 +3,7 @@
   <aside class="span4">
     <section>
       <h1>
-        <%= gravatar_for @user %>
+        <%= image_tag(@user.avatar.url, :class => 'avatar') %>
         <%= link_to @user.name, @user %>
       </h1>
       <span><b>Публікацій:</b> <%= @user.microposts.count %></span>

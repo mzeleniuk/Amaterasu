@@ -1,12 +1,12 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to image_tag("Logo.png"), root_path, id: "logo_image" %>
+      <%= link_to image_tag('Logo.png'), root_path, id: 'logo_image' %>
       <nav>
         <ul class="nav pull-right custom_font">
           <% if signed_in? %>
               <li id= "user_name_header">
-                <%= gravatar_for(current_user, size: 20) %>
+                <%= image_tag(current_user.avatar.url, :class => 'avatar_header') %>
                 <%= current_user.name %>
                 <% end %>
               </li>
@@ -24,7 +24,7 @@
                   <li><%= link_to '<i class="icon-search"></i> Користувачі'.html_safe, users_path %></li>
                   <li class="divider"></li>
                   <li>
-                    <%= link_to '<i class="icon-off"></i> Вийти'.html_safe, signout_path, method: "delete" %>
+                    <%= link_to '<i class="icon-off"></i> Вийти'.html_safe, signout_path, method: 'delete' %>
                   </li>
                 </ul>
               </li>

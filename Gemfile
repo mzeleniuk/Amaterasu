@@ -5,7 +5,7 @@ gem 'rails', '4.0.2'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
-gem 'carrierwave', '0.10.0'
+gem 'carrierwave'
 gem 'cloudinary'
 gem 'mini_magick', '3.8.0'
 gem 'will_paginate', '3.0.4'
@@ -31,11 +31,11 @@ end
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
-  gem 'capybara', '2.1.0'
+  gem 'capybara', '2.4.4'
   gem 'libnotify', '0.8.0'
   gem 'factory_girl_rails', '4.2.1'
   gem 'cucumber-rails', '1.4.0', :require => false
-  gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  gem 'database_cleaner', '1.4.1'
 end
 
 group :doc do
