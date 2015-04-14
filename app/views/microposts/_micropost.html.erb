@@ -8,8 +8,8 @@
   <span class="timestamp">
     Опубліковано <%= time_ago_in_words(micropost.created_at) %> тому.
   <% if current_user?(micropost.user) %>
-      <%= link_to "Видалити", micropost, method: :delete,
-                  data: { confirm: "Ви впевнені?" },
+      <%= link_to 'Видалити', micropost, method: :delete,
+                  data: { confirm: 'Ви впевнені?' },
                   title: micropost.content %>
   <% end %>
   </span>

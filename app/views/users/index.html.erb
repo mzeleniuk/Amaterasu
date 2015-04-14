@@ -12,8 +12,11 @@
     <% end %>
   </div>
 </div>
-<%= will_paginate %>
 <ul class="users">
   <%= render @users %>
 </ul>
 <%= will_paginate %>
+
+<% if @users.blank? %>
+<h4>Ваш запит не дав результатів</h4>
+<% end %>

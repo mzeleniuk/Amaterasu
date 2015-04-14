@@ -7,13 +7,13 @@
 
         <%= hidden_field_tag :email, @user.email %>
 
-        <%= f.label :password, "Ваш новий пароль" %>
-        <%= f.password_field :password, class: 'form-control', placeholder: "••••••" %>
+        <%= f.label :password, 'Ваш новий пароль' %>
+        <%= f.password_field :password, class: 'form-control', placeholder: '••••••' %>
 
-        <%= f.label :password_confirmation, "Підтвердження паролю" %>
-        <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "••••••" %>
+        <%= f.label :password_confirmation, 'Підтвердження паролю' %>
+        <%= f.password_field :password_confirmation, class: 'form-control', placeholder: '••••••' %>
 
-        <%= f.submit "Оновити пароль", class: "btn btn-large btn-block btn-primary button_font" %>
+        <%= f.submit 'Оновити пароль', class: 'btn btn-large btn-block btn-primary button_font' %>
     <% end %>
   </div>
 </div>

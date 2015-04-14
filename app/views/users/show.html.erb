@@ -13,13 +13,11 @@
     </section>
   </aside>
   <div class="span8">
-    <%= render 'follow_form' if signed_in? %>
-    <% if @user.microposts.any? %>
-        <h3>Публікації (<%= @user.microposts.count %>)</h3>
-        <ol class="microposts">
-          <%= render @microposts %>
-        </ol>
-        <%= will_paginate @microposts %>
-    <% end %>
+    <h3 style="display: inline-block;">Публікації (<%= @user.microposts.count %>)</h3>
+    <h3 style="float: right;"><%= render 'follow_form' if signed_in? %></h3>
+    <ol class="microposts">
+      <%= render @microposts %>
+    </ol>
+    <%= will_paginate @microposts %>
   </div>
 </div>

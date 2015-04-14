@@ -1,4 +1,4 @@
-<% provide(:title, "Редагування користувача") %>
+<% provide(:title, 'Редагування користувача') %>
 <h1>Оновіть дані Вашого профілю</h1>
 <div class="row">
   <div class="span6 offset3">
@@ -11,11 +11,10 @@
         <div class="tab-content">
 
             <div id="sectionA" class="tab-pane fade in active">
-
-                <%= f.label :name, "Ім’я користувача" %>
+                <%= f.label :name, 'Ім’я користувача' %>
                 <%= f.text_field :name %>
 
-                <%= f.label :email, "Електронна пошта" %>
+                <%= f.label :email, 'Електронна пошта' %>
                 <%= f.text_field :email %>
 
                 <%= image_tag(@user.avatar.url, :class => 'avatar', :style => 'margin-bottom: 10px') %>
@@ -26,22 +25,24 @@
             </div>
 
             <div id="sectionB" class="tab-pane fade">
+                <%= f.label :password, 'Новий пароль' %>
+                <%= f.password_field :password, placeholder: '••••••' %>
 
-                <%= f.label :password, "Пароль" %>
-                <%= f.password_field :password, placeholder: "••••••" %>
-
-                <%= f.label :password_confirmation, "Підтвердження паролю" %>
-                <%= f.password_field :password_confirmation, placeholder: "••••••" %>
+                <%= f.label :password_confirmation, 'Підтвердження паролю' %>
+                <%= f.password_field :password_confirmation, placeholder: '••••••' %>
             </div>
         </div>
-      <%= f.submit "Зберегти зміни", class: 'btn btn-large btn-block btn-primary button_font' %>
+      <%= f.label :current_password, 'Ваш поточний пароль' %>
+      <%= f.password_field :current_password, placeholder: '••••••' %>
+
+      <%= f.submit 'Зберегти зміни', class: 'btn btn-large btn-block btn-primary button_font' %>
     <% end %>
   </div>
 </div>
 
 <script type="text/javascript">
     $('#user_avatar').bind('change', function() {
-        size_in_megabytes = this.files[0].size/1024/1024;
+        var size_in_megabytes = this.files[0].size/1024/1024;
         if (size_in_megabytes > 2) {
             alert('Ви обрали зображення, розмір якого перевищує 2 мегабайти. ' +
             'Будь ласка, оберіть зображення меншого розміру.');
