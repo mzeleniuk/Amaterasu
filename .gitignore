@@ -8,8 +8,11 @@
 # Ignore uploaded test images.
 /public/uploads
 
+# Ignore Spring files.
+/spring/*.pid
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-.DS_Store
-bundler_stubs/
+.idea
+.secret

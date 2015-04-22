@@ -1,7 +1,5 @@
 @import "bootstrap";
 
-/* mixins, variables, etc. */
-
 $grayMediumLight: #eaeaea;
 
 /* universal */
@@ -164,7 +162,7 @@ aside {
       font-size: 1.4em;
       text-align: left;
       margin-bottom: 3px;
-      margin-top: 0px;
+      margin-top: 0;
     }
   }
 }
@@ -264,7 +262,7 @@ input {
 }
 
 .checkbox {
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 10px;
   span {
     margin-left: 5px;
