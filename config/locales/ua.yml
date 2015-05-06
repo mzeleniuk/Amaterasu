@@ -1,0 +1,297 @@
+ua:
+
+  email_check: На Вашу електронну пошту надіслано лист з вказівками для активації.
+  update_profile: Профіль оновлено!
+  delete_user: Користувача видалено!
+  following: Ви читаєте
+  followers: Вас читає
+  account_not_activated: Ваш обліковий запис не активовано. Перевірте електронну пошту та перейдіть за посиланням
+                         у нашому листі для активації.
+  invalid_email_password: Неправильна електронна пошта або пароль!
+  password_reset_check: Ми надіслали на Вашу електронну пошту вказівки для скидання паролю.
+  email_not_found: Електронну пошту не знайдено.
+  password_blank: Пароль не може бути пустим!
+  password_reset: Пароль успішно скинуто!
+  password_reset_expired: Термін дії посилання для скидання паролю вже минув.
+  post_created: Створено нову публікацію!
+  account_activated: Обліковий запис активовано!
+  invalid_activation_link: Посилання для активації не дійсне.
+  login: Будь ласка, увійдіть в систему.
+  incorrect: не вірний
+
+  static_pages:
+    home:
+      welcome_html: "Вітаємо на Amaterasu!"
+      promo_html: "Шукаєте сервіс для ведення свого блогу з мінімалістичним, лаконічним та
+                  ненав’язливим інтерфейсом? Amaterasu - Ваш вибір!"
+      signup_html: "Зареєструватися"
+    help:
+      help_html: "Довідка"
+      paragraph1_html: "Amaterasu - це тестовий проект, розроблений за допомогою"
+      paragraph2_html: "Для початку роботи з сайтом, будь ласка, зареєструйтесь. Після заповнення
+                       реєстраційної форми на вказану Вами електронну пошту надійде лист з посиланням
+                       для підтвердження реєстрації."
+      paragraph3_html: "Якщо у Вас виникли проблеми з реєстрацією, будь ласка, вимкніть додаток AdBlock у
+                       Вашому браузері. Після успішної реєстрації AdBlock може бути знову увімкнений."
+      paragraph4_html: "Якщо Вам необхідна допомога, будь ласка, зверніться до адміністрації сайту.
+                       Контактні дані адміністрації знаходяться у розділі"
+      contacts_html: "Контакти"
+    contact:
+      contacts_html: "Контакти"
+      paragraph1_html: "На даний час команда розробників складається всього з однієї людини."
+      paragraph2_html: "Якщо Ви зацікавлені у співпраці, зверніться до адміністрації сайту."
+      paragraph3_html: "Зеленюк Михайло (Україна):"
+    about:
+      about_html: "Про нас"
+      paragraph1_html: "<b>Аматерасу</b> (天 照, 'Небесне освітлення') - чорне полум'я, гаряче як Сонце.
+                       Це полум'я неможливо згасити, воно горить тижнями."
+      paragraph2_html: "Цей сайт написано з навчальною метою. Сайт складається з кількох статичних сторінок,
+                       форми реєстрації та профілів користувачів. На сайті можна зареєструватися, оновлювати
+                       свої персональні дані, публікувати текстові повідомлення та читати дописи інших користувачів."
+
+  layouts:
+    footer:
+      about_html: "Про нас"
+      contacts_html: "Контакти"
+      help_html: "Довідка"
+    header:
+      home_html: "Головна сторінка"
+      signin_html: "Увійти"
+      account_html: "Обліковий запис"
+      profile_html: "Профіль"
+      settings_html: "Налаштування"
+      users_html: "Користувачі"
+      logout_html: "Вийти"
+
+  microposts:
+    micropost:
+      posted_html: "Опубліковано"
+      ago_html: "тому."
+      delete_html: "Видалити"
+      confirm_html: "Ви впевнені?"
+
+  password_resets:
+    new:
+      forgot_html: "Забули свій пароль?"
+      email_html: "Ваша електронна пошта"
+      submit_html: "Підтвердити"
+    edit:
+      reset_html: "Скидання паролю"
+      new_html: "Ваш новий пароль"
+      confirm_html: "Підтвердження паролю"
+      update_html: "Оновити пароль"
+
+  sessions:
+    new:
+      login_html: "Вхід"
+      email_html: "Електронна пошта"
+      password_html: "Пароль"
+      remember_html: "Запам’ятати мене"
+      submit_html: "Увійти"
+      forgot_html: "Забули пароль?"
+      signup1_html: "Ви ще не зареєстровані?"
+      signup2_html: "Заповніть реєстраційну форму тут!"
+
+  shared:
+    error_messages:
+      errors_html: "Форма містить помилки"
+    feed_item:
+      posted_html: "Опубліковано"
+      ago_html: "тому."
+      delete_html: "Видалити"
+      confirm_html: "Ви впевнені?"
+    micropost_form:
+      textarea_html: "Текст публікації..."
+      post_html: "Опублікувати"
+      alert_html: "Максимальний розмір файлу не повинен перевищувати 2 мегабайти.
+                  Будь ласка, оберіть зображення меншого розміру."
+    stats:
+      following_html: "Ви читаєте"
+      users_html: "користувачів"
+      followers_html: "Вас читає"
+    user_info:
+      posts_html: "Публікацій:"
+
+  users:
+    follow:
+      follow_html: "Підписатися"
+    unfollow:
+      unfollow_html: "Відписатися"
+    user:
+      delete_html: "Видалити"
+      confirm_html: "Ви впевнені?"
+    edit:
+      title_html: "Редагування користувача"
+      header_html: "Оновіть дані Вашого профілю"
+      profile_html: "Профіль"
+      security_html: "Безпека"
+      name_html: "Ім’я користувача"
+      email_html: "Електронна пошта"
+      password_html: "Новий пароль"
+      confirmation_html: "Підтвердження паролю"
+      current_html: "Ваш поточний пароль"
+      save_html: "Зберегти зміни"
+      alert_html: "Максимальний розмір файлу не повинен перевищувати 2 мегабайти.
+                  Будь ласка, оберіть зображення меншого розміру."
+    index:
+      title_html: "Всі користувачі"
+      name_html: "Ім’я користувача"
+      search_html: "Пошук"
+      result_html: "Ваш запит не дав результатів"
+    new:
+      title_html: "Реєстрація"
+      name_html: "Ім’я користувача"
+      email_html: "Електронна пошта"
+      password_html: "Пароль"
+      confirmation_html: "Підтвердження паролю"
+      submit_html: "Створити обліковий запис"
+
+    show:
+      posts_html: "Публікацій:"
+      activity_html: "Публікації"
+    show_follow:
+      posts_html: "Публікацій:"
+
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        few: близько %{count} години
+        many: близько %{count} годин
+        one: близько %{count} година
+        other: близько %{count} години
+      about_x_months:
+        few: близько %{count} місяців
+        many: близько %{count} місяців
+        one: близько %{count} місяця
+        other: близько %{count} місяця
+      about_x_years:
+        few: близько %{count} років
+        many: близько %{count} років
+        one: близько %{count} року
+        other: близько %{count} року
+      almost_x_years:
+        few: майже %{count} років
+        many: майже %{count} років
+        one: майже %{count} роки
+        other: майже %{count} років
+      half_a_minute: півхвилини
+      less_than_x_minutes:
+        few: менше %{count} хвилин
+        many: менше %{count} хвилин
+        one: менше %{count} хвилини
+        other: менше %{count} хвилини
+      less_than_x_seconds:
+        few: менше %{count} секунд
+        many: менше %{count} секунд
+        one: менше %{count} секунди
+        other: менше %{count} секунди
+      over_x_years:
+        few: більше %{count} років
+        many: більше %{count} років
+        one: більше %{count} року
+        other: більше %{count} року
+      x_days:
+        few: "%{count} дні"
+        many: "%{count} днів"
+        one: "%{count} день"
+        other: "%{count} дні"
+      x_minutes:
+        few: "%{count} хвилини"
+        many: "%{count} хвилин"
+        one: "%{count} хвилина"
+        other: "%{count} хвилини"
+      x_months:
+        few: "%{count} місяці"
+        many: "%{count} місяців"
+        one: "%{count} місяць"
+        other: "%{count} місяця"
+      x_seconds:
+        few: "%{count} секунди"
+        many: "%{count} секунд"
+        one: "%{count} секунда"
+        other: "%{count} секунди"
+    prompts:
+      day: День
+      hour: Година
+      minute: Хвилина
+      month: Місяць
+      second: Секунда
+      year: Рік
+
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: має бути прийнятий
+      blank: не може бути пустим
+      confirmation: не збігається з Паролем
+      empty: не може бути порожнім
+      equal_to: має дорівнювати %{count}
+      even: має бути парним
+      exclusion: зарезервовано
+      greater_than: має бути більше ніж %{count}
+      greater_than_or_equal_to: має бути більше ніж або дорівнювати %{count}
+      inclusion: не включено до переліку
+      invalid: недійсне
+      less_than: має бути менше ніж %{count}
+      less_than_or_equal_to: має бути менше ніж або дорівнювати %{count}
+      not_a_number: не число
+      not_an_integer: не э цілим числом
+      odd: має бути непарним
+      record_invalid: 'Виникли помилки: %{errors}'
+      taken: вже зайнятий
+      too_long:
+        few: занадто довгий (максимум %{count} знаки)
+        many: занадто довгий (максимум %{count} знаків)
+        one: занадто довгий (максимум %{count} знак)
+        other: занадто довгий (максимум %{count} знаку)
+      too_short:
+        few: занадто короткий (мінімум %{count} знаки)
+        many: занадто короткий (мінімум %{count} знаків)
+        one: занадто короткий (мінімум %{count} знак)
+        other: занадто короткий (мінімум %{count} знаків)
+      wrong_length:
+        few: неправильна довжина (має бути %{count} знаки)
+        many: неправильна довжина (має бути %{count} знаків)
+        one: неправильна довжина (має бути %{count} знак)
+        other: неправильна довжина (має бути %{count} знаку)
+    template:
+      body: 'Помилки виявлено в таких полях:'
+      header:
+        few: "%{model} не збережено через %{count} помилки"
+        many: "%{model} не збережено через %{count} помилок"
+        one: "%{model} не збережено через %{count} помилку"
+        other: "%{model} не збережено через %{count} помилки"
+
+  helpers:
+    select:
+      prompt: 'Оберіть: '
+    submit:
+      create: Створити %{model}
+      submit: Зберегти %{model}
+      update: Зберегти %{model}
+
+  number:
+    currency:
+      format:
+        delimiter: " "
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: грн.
+    format:
+      delimiter: " "
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+
+  activerecord:
+    attributes:
+      user:
+        name: "Поле 'Ім’я користувача'"
+        email: "Поле 'Електронна пошта'"
+        password: "Пароль"
+        password_confirmation: "Підтвердження паролю"
+        current_password: "Поточний пароль"

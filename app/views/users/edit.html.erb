@@ -1,51 +1,49 @@
-<% provide(:title, 'Редагування користувача') %>
-<h1>Оновіть дані Вашого профілю</h1>
+<% provide(:title, t('.title_html')) %>
+<h1><%= t('.header_html') %></h1>
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@user, :html => { :multipart => true }) do |f| %>
-        <%= render 'shared/error_messages', object: f.object %>
+      <%= render 'shared/error_messages', object: f.object %>
         <ul class="nav nav-tabs">
-          <li class="active"><a data-toggle="tab" href="#sectionA">Профіль</a></li>
-          <li><a data-toggle="tab" href="#sectionB">Безпека</a></li>
+          <li class="active"><a data-toggle="tab" href="#sectionA"><%= t('.profile_html') %></a></li>
+          <li><a data-toggle="tab" href="#sectionB"><%= t('.security_html') %></a></li>
         </ul>
         <div class="tab-content">
+          <div id="sectionA" class="tab-pane fade in active">
+            <%= f.label :name, t('.name_html') %>
+            <%= f.text_field :name %>
 
-            <div id="sectionA" class="tab-pane fade in active">
-                <%= f.label :name, 'Ім’я користувача' %>
-                <%= f.text_field :name %>
+            <%= f.label :email, t('.email_html') %>
+            <%= f.text_field :email %>
 
-                <%= f.label :email, 'Електронна пошта' %>
-                <%= f.text_field :email %>
+            <%= image_tag(@user.avatar.url, :class => 'avatar', :style => 'margin-bottom: 10px') %>
+              <span class="picture">
+                <%= f.file_field :avatar, accept: 'image/jpeg, image/gif, image/png' %>
+              </span>
+            <%= f.hidden_field :avatar_cache %>
+          </div>
+          <div id="sectionB" class="tab-pane fade">
+            <%= f.label :password, t('.password_html') %>
+            <%= f.password_field :password, placeholder: '••••••' %>
 
-                <%= image_tag(@user.avatar.url, :class => 'avatar', :style => 'margin-bottom: 10px') %>
-                <span class="picture">
-                  <%= f.file_field :avatar, accept: 'image/jpeg, image/gif, image/png' %>
-                </span>
-                <%= f.hidden_field :avatar_cache %>
-            </div>
-
-            <div id="sectionB" class="tab-pane fade">
-                <%= f.label :password, 'Новий пароль' %>
-                <%= f.password_field :password, placeholder: '••••••' %>
-
-                <%= f.label :password_confirmation, 'Підтвердження паролю' %>
-                <%= f.password_field :password_confirmation, placeholder: '••••••' %>
-            </div>
+            <%= f.label :password_confirmation, t('.confirmation_html') %>
+            <%= f.password_field :password_confirmation, placeholder: '••••••' %>
+          </div>
         </div>
-      <%= f.label :current_password, 'Ваш поточний пароль' %>
-      <%= f.password_field :current_password, placeholder: '••••••' %>
+      <hr>
+        <%= f.label :current_password, t('.current_html') %>
+        <%= f.password_field :current_password, placeholder: '••••••' %>
 
-      <%= f.submit 'Зберегти зміни', class: 'btn btn-large btn-block btn-primary button_font' %>
+        <%= f.submit t('.save_html'), class: 'btn btn-large btn-block btn-primary button_font' %>
     <% end %>
   </div>
 </div>
 
 <script type="text/javascript">
-    $('#user_avatar').bind('change', function() {
-        var size_in_megabytes = this.files[0].size/1024/1024;
-        if (size_in_megabytes > 2) {
-            alert('Ви обрали зображення, розмір якого перевищує 2 мегабайти. ' +
-            'Будь ласка, оберіть зображення меншого розміру.');
-        }
-    });
+  $('#user_avatar').bind('change', function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+      if (size_in_megabytes > 2) {
+          alert(<%= t('.alert_html') %>);
+      }
+  });
 </script>

@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       @user.send_activation_email
-      flash[:info] = 'Please check your email to activate your account.'
+      flash[:info] = t(:email_check)
       redirect_to root_url
     else
       render 'new'
@@ -34,17 +34,17 @@ class UsersController < ApplicationController
   def update
     current_password = params[:user].delete(:current_password)
     if @user.authenticate(current_password) && @user.update(user_params)
-      flash[:success] = 'Profile updated!'
+      flash[:success] = t(:update_profile)
       redirect_to @user
     else
-      @user.errors.add(:current_password, 'is incorrect') unless @user.authenticate(current_password)
+      @user.errors.add(:current_password, t(:incorrect)) unless @user.authenticate(current_password)
       render 'edit'
     end
   end
 
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = 'User deleted!'
+    flash[:success] = t(:delete_user)
     redirect_to users_url
   end
 
@@ -53,14 +53,14 @@ class UsersController < ApplicationController
   end
 
   def following
-    @title = 'Ви читаєте'
+    @title = t(:following)
     @user = User.find(params[:id])
     @users = @user.following.paginate(page: params[:page])
     render 'show_follow'
   end
 
   def followers
-    @title = 'Вас читає'
+    @title = t(:followers)
     @user = User.find(params[:id])
     @users = @user.followers.paginate(page: params[:page])
     render 'show_follow'

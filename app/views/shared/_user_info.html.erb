@@ -1,7 +1,5 @@
 <%= image_tag(current_user.avatar.url, :class => 'avatar') %>
-<h1>
-  <%= link_to current_user.name, current_user %>
-</h1>
+<h1><%= link_to current_user.name, current_user %></h1>
 <span>
-  <b>Публікацій:</b> <%= current_user.microposts.count %>
+  <b><%= t('.posts_html') %></b> <%= current_user.microposts.count %>
 </span>

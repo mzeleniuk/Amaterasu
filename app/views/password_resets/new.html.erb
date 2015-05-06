@@ -1,12 +1,12 @@
-<% provide(:title, 'Забули свій пароль?') %>
-<h1>Забули свій пароль?</h1>
+<% provide(:title, t('.forgot_html')) %>
+<h1><%= t('.forgot_html') %></h1>
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(:password_reset, url: password_resets_path) do |f| %>
-        <%= f.label :email, 'Ваша електронна пошта' %>
-        <%= f.email_field :email, class: 'form-control', placeholder: 'user@example.com' %>
+      <%= f.label :email, t('.email_html') %>
+      <%= f.email_field :email, class: 'form-control', placeholder: 'user@example.com' %>
 
-        <%= f.submit 'Підтвердити', class: 'btn btn-large btn-block btn-primary button_font' %>
+      <%= f.submit t('.submit_html'), class: 'btn btn-large btn-block btn-primary button_font' %>
     <% end %>
   </div>
 </div>

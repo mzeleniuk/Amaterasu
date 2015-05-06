@@ -1,19 +1,19 @@
-<% provide(:title, 'Скидання паролю') %>
-<h1>Скидання паролю</h1>
+<% provide(:title, t('.reset_html')) %>
+<h1><%= t('.reset_html') %></h1>
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@user, url: password_reset_path(params[:id])) do |f| %>
-        <%= render 'shared/error_messages', object: f.object %>
+      <%= render 'shared/error_messages', object: f.object %>
 
-        <%= hidden_field_tag :email, @user.email %>
+      <%= hidden_field_tag :email, @user.email %>
 
-        <%= f.label :password, 'Ваш новий пароль' %>
-        <%= f.password_field :password, class: 'form-control', placeholder: '••••••' %>
+      <%= f.label :password, t('.new_html') %>
+      <%= f.password_field :password, class: 'form-control', placeholder: '••••••' %>
 
-        <%= f.label :password_confirmation, 'Підтвердження паролю' %>
-        <%= f.password_field :password_confirmation, class: 'form-control', placeholder: '••••••' %>
+      <%= f.label :password_confirmation, t('.confirm_html') %>
+      <%= f.password_field :password_confirmation, class: 'form-control', placeholder: '••••••' %>
 
-        <%= f.submit 'Оновити пароль', class: 'btn btn-large btn-block btn-primary button_font' %>
+      <%= f.submit t('.update_html'), class: 'btn btn-large btn-block btn-primary button_font' %>
     <% end %>
   </div>
 </div>

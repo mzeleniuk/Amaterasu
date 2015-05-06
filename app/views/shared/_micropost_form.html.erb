@@ -1,20 +1,19 @@
 <%= form_for(@micropost, html: { multipart: true }) do |f| %>
-    <%= render 'shared/error_messages', object: f.object %>
-    <div class="field custom_font">
-      <%= f.text_area :content, placeholder: 'Текст публікації...' %>
-    </div>
-    <span class="picture">
-        <%= f.file_field :picture, accept: 'image/jpeg, image/gif, image/png' %>
-    </span>
-    <%= f.submit 'Опублікувати', class: 'btn btn-large btn-block btn-primary button_font' %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field custom_font">
+    <%= f.text_area :content, placeholder: t('.textarea_html') %>
+  </div>
+  <span class="picture">
+    <%= f.file_field :picture, accept: 'image/jpeg, image/gif, image/png' %>
+  </span>
+  <%= f.submit t('.post_html'), class: 'btn btn-large btn-block btn-primary button_font' %>
 <% end %>
 
 <script type="text/javascript">
-    $('#micropost_picture').bind('change', function() {
-        var size_in_megabytes = this.files[0].size/1024/1024;
-        if (size_in_megabytes > 2) {
-            alert('Максимальний розмір файлу не повинен перевищувати 2 мегабайти. ' +
-            'Будь ласка, оберіть зображення меншого розміру.');
-        }
-    });
+  $('#micropost_picture').bind('change', function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+      if (size_in_megabytes > 2) {
+        alert(<%= t('.alert_html') %>);
+      }
+  });
 </script>

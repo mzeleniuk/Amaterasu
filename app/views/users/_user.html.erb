@@ -2,7 +2,7 @@
   <%= image_tag(user.avatar.url, :class => 'avatar') %>
   <%= link_to user.name, user %>
   <% if current_user.admin? && !current_user?(user) %>
-      | <%= link_to 'Видалити', user, method: :delete,
-                    data: { confirm: 'Ви впевнені?' } %>
+    | <%= link_to t('.delete_html'), user, method: :delete,
+                  data: { confirm: t('.confirm_html') } %>
   <% end %>
 </li>

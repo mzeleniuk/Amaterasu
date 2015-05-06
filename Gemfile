@@ -2,17 +2,17 @@ source 'https://rubygems.org'
 ruby '2.2.0'
 
 gem 'rails', '4.0.2'
-gem 'bootstrap-sass', '2.3.2.0'
-gem 'bcrypt-ruby', '3.1.2'
-gem 'faker', '1.1.2'
-gem 'carrierwave'
-gem 'cloudinary'
+gem 'bootstrap-sass', '2.3.2.2'
+gem 'bcrypt-ruby', '3.1.5'
+gem 'faker', '1.4.3'
+gem 'carrierwave', '0.10.0'
+gem 'cloudinary', '1.1.0'
 gem 'mini_magick', '3.8.0'
-gem 'will_paginate', '3.0.4'
-gem 'bootstrap-will_paginate', '0.0.9'
+gem 'will_paginate', '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
 gem 'tzinfo', '0.3.43'
 gem 'sass-rails', '4.0.1'
-gem 'uglifier', '2.1.1'
+gem 'uglifier', '2.7.1'
 gem 'coffee-rails', '4.0.1'
 gem 'jquery-rails', '3.0.4'
 gem 'turbolinks', '1.1.1'
@@ -30,11 +30,11 @@ group :development, :test do
 end
 
 group :test do
-  gem 'selenium-webdriver', '2.35.1'
+  gem 'selenium-webdriver', '2.45.0'
   gem 'capybara', '2.4.4'
   gem 'libnotify', '0.8.0'
   gem 'factory_girl_rails', '4.2.1'
-  gem 'cucumber-rails', '1.4.0', :require => false
+  gem 'cucumber-rails', '1.4.2', :require => false
   gem 'database_cleaner', '1.4.1'
 end
 
@@ -43,7 +43,7 @@ group :doc do
 end
 
 group :production do
-  gem 'pg', '0.17.1'
-  gem 'rails_12factor', '0.0.2'
+  gem 'pg', '0.18.1'
+  gem 'rails_12factor', '0.0.3'
   gem 'unicorn', '4.8.3'
 end

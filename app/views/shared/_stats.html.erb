@@ -1,19 +1,19 @@
 <% @user ||= current_user %>
 <div class="stats">
   <a href="<%= following_user_path(@user) %>">
-    Ви читаєте
+    <%= t('.following_html') %>
     <br>
     <strong id="following" class="stat">
       <%= @user.following.count %>
     </strong>
-    користувачів
+    <%= t('.users_html') %>
   </a>
   <a href="<%= followers_user_path(@user) %>">
-    Вас читає
+    <%= t('.followers_html') %>
     <br>
-    <strong id="followers" class="stat" >
+    <strong id="followers" class="stat">
       <%= @user.followers.count %>
     </strong>
-    користувачів
+    <%= t('.users_html') %>
   </a>
 </div>

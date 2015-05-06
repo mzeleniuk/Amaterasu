@@ -17,7 +17,7 @@ Amaterasu::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :test
   host = 'localhost:3000'
-  config.action_mailer.default_url_options = { host: host }
+  config.action_mailer.default_url_options = { host: host, locale: I18n.locale }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

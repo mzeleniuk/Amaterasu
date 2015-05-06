@@ -10,12 +10,12 @@ class SessionsController < ApplicationController
         params[:session][:remember_me] == '1' ? remember(user) : forget(user)
         redirect_back_or user
       else
-        message = 'Account not activated. Check your email for the activation link.'
+        message = t(:account_not_activated)
         flash[:warning] = message
         redirect_to root_url
       end
     else
-      flash.now[:danger] = 'Invalid email/password combination'
+      flash.now[:danger] = t(:invalid_email_password)
       render 'new'
     end
   end

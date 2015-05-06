@@ -1,23 +1,259 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+
+  email_check: Please check your email to activate your account.
+  update_profile: Profile updated!
+  delete_user: User deleted!
+  following: Following
+  followers: Followers
+  account_not_activated: Account not activated. Check your email for the activation link.
+  invalid_email_password: Invalid email/password combination!
+  password_reset_check: Check your Email for password reset instructions.
+  email_not_found: Email address not found.
+  password_blank: Password can't be blank!
+  password_reset: Password has been reset!
+  password_reset_expired: Password reset has expired.
+  post_created: Post created!
+  account_activated: Account activated!
+  invalid_activation_link: Invalid activation link.
+  login: Please log in.
+  incorrect: is incorrect
+
+  static_pages:
+    home:
+      welcome_html: "Welcome to Amaterasu!"
+      promo_html: "Looking up for a service to make your own blog with minimalist, concise and
+                  unobtrusive interface? Amaterasu is your choice!"
+      signup_html: "Sing up now!"
+    help:
+      help_html: "Help"
+      paragraph1_html: "Amaterasu is a test project developed using"
+      paragraph2_html: "To get started, please sign in. After completing the registration
+                       you will receive an email with a confirmation link."
+      paragraph3_html: "If you have any problems with registration, please disable AdBlock in
+                       your browser. After successful registration AdBlock can be turned on again."
+      paragraph4_html: "If you need any help, please contact site administrator. Administrator's contact
+                       email you can see in section"
+      contacts_html: "Contacts"
+    contact:
+      contacts_html: "Contacts"
+      paragraph1_html: "Currently, the development team consists of only one person."
+      paragraph2_html: "If you are interested in cooperation, please contact the site administration."
+      paragraph3_html: "Michael Zelenyuk (Ukraine):"
+    about:
+      about_html: "About Us"
+      paragraph1_html: "<b>Amaterasu</b> (天 照, 'Heaven lighting') - black flames, hot as the sun. It is
+                       impossible to put out the flame, it burns weeks."
+      paragraph2_html: "This site is written for educational purposes. The site consists of a few static pages,
+                       registration forms and user profiles. Users can register, update their personal information,
+                       publish text messages and read posts from other users."
+
+  layouts:
+    footer:
+      about_html: "About Us"
+      contacts_html: "Contacts"
+      help_html: "Help"
+    header:
+      home_html: "Home"
+      signin_html: "Log in"
+      account_html: "Account"
+      profile_html: "Profile"
+      settings_html: "Settings"
+      users_html: "All users"
+      logout_html: "Log out"
+
+  microposts:
+    micropost:
+      posted_html: "Posted"
+      ago_html: "ago."
+      delete_html: "Delete"
+      confirm_html: "Are you sure?"
+
+  password_resets:
+    new:
+      forgot_html: "Forgot password?"
+      email_html: "Your email"
+      submit_html: "Submit"
+    edit:
+      reset_html: "Reset password"
+      new_html: "New password"
+      confirm_html: "Confirm password"
+      update_html: "Update password"
+
+  sessions:
+    new:
+      login_html: "Log in"
+      email_html: "Email"
+      password_html: "Password"
+      remember_html: "Remember me"
+      submit_html: "Log in"
+      forgot_html: "Forgot password?"
+      signup1_html: "New user?"
+      signup2_html: "Sign up now!"
+
+  shared:
+    error_messages:
+      errors_html: "The form contains errors"
+    feed_item:
+      posted_html: "Posted"
+      ago_html: "ago."
+      delete_html: "Delete"
+      confirm_html: "Are you sure?"
+    micropost_form:
+      textarea_html: "Your text..."
+      post_html: "Create Post"
+      alert_html: "Maximum file size is 2 MB. Please choose a smaller file."
+    stats:
+      following_html: "You are following"
+      users_html: "users"
+      followers_html: "Your followers"
+    user_info:
+      posts_html: "Posts:"
+
+  users:
+    follow:
+      follow_html: "Follow"
+    unfollow:
+      unfollow_html: "Unfollow"
+    user:
+      delete_html: "Delete"
+      confirm_html: "Are you sure?"
+    edit:
+      title_html: "Edit user"
+      header_html: "Update your profile"
+      profile_html: "Profile"
+      security_html: "Security"
+      name_html: "User name"
+      email_html: "Email"
+      password_html: "New password"
+      confirmation_html: "Confirm new password"
+      current_html: "Your current password"
+      save_html: "Update profile"
+      alert_html: "Maximum file size is 2 MB. Please choose a smaller file."
+    index:
+      title_html: "All users"
+      name_html: "User name"
+      search_html: "Search"
+      result_html: "Your search returned no results"
+    new:
+      title_html: "Sign up"
+      name_html: "User name"
+      email_html: "Email"
+      password_html: "Password"
+      confirmation_html: "Confirm password"
+      submit_html: "Create my account"
+
+    show:
+      posts_html: "Posts:"
+      activity_html: "Posts"
+    show_follow:
+      posts_html: "Posts:"
+
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: about 1 hour
+        other: about %{count} hours
+      about_x_months:
+        one: about 1 month
+        other: about %{count} months
+      about_x_years:
+        one: about 1 year
+        other: about %{count} years
+      almost_x_years:
+        one: almost 1 year
+        other: almost %{count} years
+      half_a_minute: half a minute
+      less_than_x_minutes:
+        one: less than a minute
+        other: less than %{count} minutes
+      less_than_x_seconds:
+        one: less than 1 second
+        other: less than %{count} seconds
+      over_x_years:
+        one: over 1 year
+        other: over %{count} years
+      x_days:
+        one: 1 day
+        other: "%{count} days"
+      x_minutes:
+        one: 1 minute
+        other: "%{count} minutes"
+      x_months:
+        one: 1 month
+        other: "%{count} months"
+      x_seconds:
+        one: 1 second
+        other: "%{count} seconds"
+    prompts:
+      day: Day
+      hour: Hour
+      minute: Minute
+      month: Month
+      second: Seconds
+      year: Year
+
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: must be accepted
+      blank: can't be blank
+      present: must be blank
+      confirmation: doesn't match %{attribute}
+      empty: can't be empty
+      equal_to: must be equal to %{count}
+      even: must be even
+      exclusion: is reserved
+      greater_than: must be greater than %{count}
+      greater_than_or_equal_to: must be greater than or equal to %{count}
+      inclusion: is not included in the list
+      invalid: is invalid
+      less_than: must be less than %{count}
+      less_than_or_equal_to: must be less than or equal to %{count}
+      not_a_number: is not a number
+      not_an_integer: must be an integer
+      odd: must be odd
+      record_invalid: 'Validation failed: %{errors}'
+      restrict_dependent_destroy:
+        one: Cannot delete record because a dependent %{record} exists
+        many: Cannot delete record because dependent %{record} exist
+      taken: has already been taken
+      too_long:
+        one: is too long (maximum is 1 character)
+        other: is too long (maximum is %{count} characters)
+      too_short:
+        one: is too short (minimum is 1 character)
+        other: is too short (minimum is %{count} characters)
+      wrong_length:
+        one: is the wrong length (should be 1 character)
+        other: is the wrong length (should be %{count} characters)
+      other_than: must be other than %{count}
+    template:
+      body: 'There were problems with the following fields:'
+      header:
+        one: 1 error prohibited this %{model} from being saved
+        other: "%{count} errors prohibited this %{model} from being saved"
+
+  helpers:
+    select:
+      prompt: Please select
+    submit:
+      create: Create %{model}
+      submit: Save %{model}
+      update: Update %{model}
+
+  number:
+    currency:
+      format:
+        delimiter: ","
+        format: "%u%n"
+        precision: 2
+        separator: "."
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "$"
+    format:
+      delimiter: ","
+      precision: 3
+      separator: "."
+      significant: false
+      strip_insignificant_zeros: false
