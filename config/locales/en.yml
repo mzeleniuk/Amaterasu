@@ -20,6 +20,7 @@ en:
 
   static_pages:
     home:
+      feed_html: "News feed"
       welcome_html: "Welcome to Amaterasu!"
       promo_html: "Looking up for a service to make your own blog with minimalist, concise and
                   unobtrusive interface? Amaterasu is your choice!"
