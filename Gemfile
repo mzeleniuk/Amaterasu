@@ -22,6 +22,9 @@ gem 'slim', '2.0.0'
 
 group :development, :test do
   gem 'sqlite3', '1.3.10'
+  gem 'byebug', '4.0.5'
+  gem 'web-console', '2.1.2'
+  gem 'spring', '1.3.5'
   gem 'test-unit', '3.0.9'
   gem 'rspec-rails', '3.2.1'
   gem 'guard-rspec', '4.5.0'

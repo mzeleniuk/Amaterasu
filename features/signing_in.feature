@@ -1,13 +1,15 @@
+@javascript
+
 Feature: Signing in
 
-  Scenario: Unsuccessful signin
-    Given a user visits the signin page
-    When they submit invalid signin information
-    Then they should see an error message
+  Scenario: Unsuccessful log in
+    Given User visits the log in page
+    When He submit invalid log in information
+    Then He should see an error message
 
-  Scenario: Successful signin
-    Given a user visits the signin page
-    And the user has an account
-    When the user submits valid signin information
-    Then they should see their profile page
-    And they should see a signout link
+  Scenario: Successful log in
+    Given User visits the log in page
+    And User has an account
+    When User submits valid log in information
+    Then He should see his profile page
+    And He should see a log out link

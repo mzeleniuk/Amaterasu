@@ -1,30 +1,31 @@
-Given /^a user visits the signin page$/ do
-  visit signin_path
+Given /^User visits the log in page$/ do
+  visit '/en/signin'
 end
 
-When /^they submit invalid signin information$/ do
-  click_button "Увійти"
+When /^He submit invalid log in information$/ do
+  click_button 'Log in'
 end
 
-Then /^they should see an error message$/ do
-  expect(page).to have_selector('div.alert.alert-error')
+Then /^He should see an error message$/ do
+  expect(page).to have_content('Invalid email/password combination!')
 end
 
-Given /^the user has an account$/ do
-  @user = User.create(name: "Example User", email: "user@example.com",
-                      password: "foobar", password_confirmation: "foobar")
+And /^User has an account$/ do
+  @user = User.create(name: 'Example User', email: 'user@example.com',
+                      password: 'foobar', password_confirmation: 'foobar', activated: true)
 end
 
-When /^the user submits valid signin information$/ do
-  fill_in "Електронна пошта",    with: @user.email
-  fill_in "Пароль", with: @user.password
-  click_button "Увійти"
+When /^User submits valid log in information$/ do
+  fill_in 'Email', with: @user.email
+  fill_in 'Password', with: @user.password
+  click_button 'Log in'
 end
 
-Then /^they should see their profile page$/ do
+Then /^He should see his profile page$/ do
   expect(page).to have_title(@user.name)
 end
 
-Then /^they should see a signout link$/ do
-  expect(page).to have_link('Вийти', href: signout_path)
+Then /^He should see a log out link$/ do
+  click_link 'Account'
+  expect(page).to have_link('Log out')
 end
