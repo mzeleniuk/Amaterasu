@@ -1,86 +1,102 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe "Static pages" do
+describe 'Static pages' do
 
   subject { page }
 
-  shared_examples_for "all static pages" do
-    it { should have_selector('h1', text: heading) }
-    it { should have_title(full_title(page_title)) }
+  shared_examples_for 'all static pages' do
+    it { expect(page).to have_selector('h1', text: heading) }
+    it { expect(page).to have_title(page.title) }
   end
 
-  describe "Home page" do
-    before { visit root_path }
-    let(:heading)    { 'Amaterasu' }
+  describe 'Home page' do
+    let(:heading) { 'Amaterasu' }
     let(:page_title) { '' }
 
-    it_should_behave_like "all static pages"
-    it { should_not have_title('| Home') }
+    before { visit root_path }
 
-    describe "for signed-in users" do
+    it_should_behave_like 'all static pages'
+    it { expect(page).to_not have_title('| Home') }
+
+    describe 'for logged-in users' do
       let(:user) { FactoryGirl.create(:user) }
+
       before do
-        FactoryGirl.create(:micropost, user: user, content: "Lorem ipsum")
-        FactoryGirl.create(:micropost, user: user, content: "Dolor sit amet")
-        sign_in user
+        FactoryGirl.create(:micropost, user: user, content: 'First content.')
+        FactoryGirl.create(:micropost, user: user, content: 'Last content.')
+
+        visit '/en/signin'
+        fill_in 'Email', with: user.email.upcase
+        fill_in 'Password', with: user.password
+        click_button 'Log in'
+
         visit root_path
       end
 
-      it "should render the user's feed" do
+      it 'renders the user\'s feed' do
         user.feed.each do |item|
-          expect(page).to have_selector("li##{item.id}", text: item.content)
+          expect(page).to have_selector('li', text: item.content)
         end
       end
 
-      describe "follower/following counts" do
+      describe 'follower/following counts' do
         let(:other_user) { FactoryGirl.create(:user) }
+
         before do
-          other_user.follow!(user)
+          visit '/en/signin'
+          fill_in 'Email', with: user.email.upcase
+          fill_in 'Password', with: user.password
+          click_button 'Log in'
+
+          other_user.follow(user)
           visit root_path
         end
 
-        it { should have_link("0 following", href: following_user_path(user)) }
-        it { should have_link("1 followers", href: followers_user_path(user)) }
+        it { should have_link('You are following 0 users') }
+        it { should have_link('Your followers 1 user') }
       end
     end
   end
 
-  describe "Help page" do
-    before { visit help_path }
-    let(:heading)    { 'Довідка' }
-    let(:page_title) { full_title('Довідка') }
+  describe 'Help page' do
+    let(:heading) { 'Help' }
+    let(:page_title) { full_title('Help') }
 
-    it_should_behave_like "all static pages"
+    before { visit '/en/help' }
+
+    it_should_behave_like 'all static pages'
   end
 
-  describe "About page" do
-    before { visit about_path }
-    let(:heading)    { 'Про нас' }
-    let(:page_title) { full_title('Про нас') }
+  describe 'About page' do
+    let(:heading) { 'About Us' }
+    let(:page_title) { full_title('About Us') }
 
-    it_should_behave_like "all static pages"
+    before { visit '/en/about' }
+
+    it_should_behave_like 'all static pages'
   end
 
-  describe "Contact page" do
-    before { visit contact_path }
-    let(:heading)    { 'Контакти' }
-    let(:page_title) { full_title('Контакти') }
+  describe 'Contact page' do
+    let(:heading) { 'Contacts' }
+    let(:page_title) { full_title('Contacts') }
 
-    it_should_behave_like "all static pages"
+    before { visit '/en/contact' }
+
+    it_should_behave_like 'all static pages'
   end
 
-  it "should have the right links on the layout" do
+  it 'have the right links on the layout' do
     visit root_path
-    click_link "Про нас"
-    expect(page).to have_title(full_title('Про нас'))
-    click_link "Довідка"
-    expect(page).to have_title(full_title('Довідка'))
-    click_link "Контакти"
-    expect(page).to have_title(full_title('Контакти'))
-    click_link "Головна сторінка"
-    click_link "Sign up now!"
-    expect(page).to have_title(full_title('Зареєструватися'))
-    click_link "Amaterasu"
-    expect(page).to have_title(full_title(''))
+
+    click_link 'Contacts'
+    expect(page).to have_title('Amaterasu | Contacts')
+    click_link 'About Us'
+    expect(page).to have_title('Amaterasu | About Us')
+    click_link 'Help'
+    expect(page).to have_title('Amaterasu | Help')
+    click_link 'Home'
+    expect(page).to have_title('Amaterasu')
+    click_link 'Sign up now!'
+    expect(page).to have_title('Amaterasu | Sign up')
   end
 end

@@ -24,7 +24,7 @@ en:
       welcome_html: "Welcome to Amaterasu!"
       promo_html: "Looking up for a service to make your own blog with minimalist, concise and
                   unobtrusive interface? Amaterasu is your choice!"
-      signup_html: "Sing up now!"
+      signup_html: "Sign up now!"
     help:
       help_html: "Help"
       paragraph1_html: "Amaterasu is a test project developed using"
