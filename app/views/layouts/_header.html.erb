@@ -5,19 +5,19 @@
       <nav>
         <ul class="nav pull-right custom_font">
           <% if signed_in? %>
-            <li id= "user_name_header">
+            <li id="user_name_header">
               <%= image_tag(current_user.avatar.url, :class => 'avatar_header') %>
               <%= current_user.name %>
-              <% end %>
             </li>
-            <li>
-              <%= link_to(root_path) do %>
-                <i class='icon-home icon-white'></i>
-                <%= t('.home_html') %>
-              <% end %>
-            </li>
+          <% end %>
+          <li>
+            <%= link_to(root_path) do %>
+              <i class='icon-home icon-white'></i>
+              <%= t('.home_html') %>
+            <% end %>
+          </li>
           <% if signed_in? %>
-            <li id="fat-menu" class="dropdown" >
+            <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <%= t('.account_html') %> <b class="caret"></b>
               </a>
@@ -30,22 +30,22 @@
                 </li>
                 <li>
                   <%= link_to(edit_user_path(current_user)) do %>
-                      <i class='icon-edit'></i>
-                      <%= t('.settings_html') %>
+                    <i class='icon-edit'></i>
+                    <%= t('.settings_html') %>
                   <% end %>
                 </li>
                 <li class="divider"></li>
                 <li>
                   <%= link_to(users_path) do %>
-                      <i class='icon-search'></i>
-                      <%= t('.users_html') %>
+                    <i class='icon-search'></i>
+                    <%= t('.users_html') %>
                   <% end %>
                 </li>
                 <li class="divider"></li>
                 <li>
                   <%= link_to(signout_path, method: 'delete') do %>
-                      <i class='icon-off'></i>
-                      <%= t('.logout_html') %>
+                    <i class='icon-off'></i>
+                    <%= t('.logout_html') %>
                   <% end %>
                 </li>
               </ul>

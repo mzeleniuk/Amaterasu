@@ -1,5 +1,7 @@
 <% provide(:title, t('.title_html')) %>
+
 <h1><%= t('.title_html') %></h1>
+
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@user) do |f| %>
@@ -9,7 +11,7 @@
       <%= f.text_field :name, placeholder: 'James Willson' %>
 
       <%= f.label :email, t('.email_html') %>
-      <%= f.text_field :email, placeholder: 'user@example.com' %>
+      <%= f.email_field :email, placeholder: 'user@example.com' %>
 
       <%= f.label :password, t('.password_html') %>
       <%= f.password_field :password, placeholder: '••••••' %>

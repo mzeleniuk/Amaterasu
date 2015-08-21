@@ -13,14 +13,14 @@ class User < ActiveRecord::Base
 
   before_save :downcase_email
   before_create :create_activation_digest
-  validates :name, presence: true, length: { maximum: 50 }
+  validates :name, presence: true, length: {maximum: 50}
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
-  validates :email, presence: true, length: { maximum: 255 },
-            format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
-  validates :password, length: { minimum: 6 }, allow_blank: true
-  validate  :avatar_size
+  validates :email, presence: true, length: {maximum: 255},
+            format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
+  validates :password, length: {minimum: 6}, allow_blank: true
+  validate :avatar_size
 
   has_secure_password
 
@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
 
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
-      BCrypt::Engine.cost
+        BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
   end
 
@@ -111,7 +111,7 @@ class User < ActiveRecord::Base
     if search
       find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
     else
-      find(:all)
+      all
     end
   end
 

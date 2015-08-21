@@ -17,7 +17,6 @@ describe 'Micropost pages' do
     before { visit root_path }
 
     describe 'with invalid information' do
-
       it 'not creates a micropost' do
         expect { click_button 'Post' }.not_to change(Micropost, :count)
       end
