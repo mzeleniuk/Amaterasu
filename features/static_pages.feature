@@ -8,7 +8,7 @@ Feature: Static pages
     And He should see text 'Looking up for a service to make your own blog with minimalist, concise and unobtrusive interface? Amaterasu is your choice!'
     And He should see a 'Home' link
     And He should see a 'Log in' link
-    And He should see a 'Sing up now!' link
+    And He should see a 'Sign up now!' link
     And He should see text 'Michael Zelenyuk'
     And He should see a 'About Us' link
     And He should see a 'Contacts' link
