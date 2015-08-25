@@ -1,23 +1,29 @@
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: amaterasu_dev
   pool: 5
-  timeout: 5000
+  username: root
+  password: 'secret'
 
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
 test: &test
-  adapter: sqlite3
-  database: db/test.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: amaterasu_test
   pool: 5
-  timeout: 5000
+  username: root
+  password: 'secret'
 
 production:
   adapter: postgresql
   encoding: unicode
-  database:
+  database: amaterasu_production
   pool: 5
-  username:
-  password:
-  timeout: 5000
+  username: root
+  password: 'secret'
 
 cucumber:
   <<: *test

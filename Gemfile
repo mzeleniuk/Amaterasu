@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.2.0'
 
 gem 'rails', '4.0.2'
+gem 'pg', '0.18.1'
 gem 'bootstrap-sass', '2.3.2.2'
 gem 'bcrypt-ruby', '3.1.5'
 gem 'faker', '1.4.3'
@@ -21,7 +22,6 @@ gem 'sprockets', '2.11.0'
 gem 'slim', '2.0.0'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.10'
   gem 'byebug', '4.0.5'
   gem 'web-console', '2.1.2'
   gem 'spring', '1.3.5'
@@ -44,7 +44,6 @@ group :doc do
 end
 
 group :production do
-  gem 'pg', '0.18.1'
   gem 'rails_12factor', '0.0.3'
   gem 'unicorn', '4.8.3'
 end
