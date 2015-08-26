@@ -52,8 +52,17 @@ describe 'Static pages' do
           visit root_path
         end
 
-        it { should have_link('You are following 0 users') }
-        it { should have_link('Your followers 1 user') }
+        it { expect(page).to have_link('You are following 0 users') }
+        it { expect(page).to have_link('Your followers 1 user') }
+      end
+    end
+
+    describe 'wrong locale' do
+      it 'shows error message' do
+        visit '/uk'
+
+        expect(page).to have_text('Welcome to Amaterasu!')
+        expect(page).to have_text('uk translation not available')
       end
     end
   end

@@ -16,3 +16,6 @@
 /tmp
 .idea
 .secret
+
+# SimpleCov code coverage
+/coverage

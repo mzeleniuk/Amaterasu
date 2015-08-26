@@ -21,6 +21,9 @@ gem 'jbuilder', '1.0.2'
 gem 'sprockets', '2.11.0'
 gem 'slim', '2.0.0'
 
+# Code coverage
+gem 'simplecov', '0.10.0', require: false, group: :test
+
 group :development, :test do
   gem 'byebug', '4.0.5'
   gem 'web-console', '2.1.2'
@@ -32,7 +35,7 @@ group :development, :test do
   gem 'capybara', '2.4.4'
   gem 'libnotify', '0.8.0'
   gem 'factory_girl_rails', '4.5.0'
-  gem 'cucumber-rails', '1.4.2', :require => false
+  gem 'cucumber-rails', '1.4.2', require: false
   gem 'database_cleaner', '1.4.1'
 end
 
