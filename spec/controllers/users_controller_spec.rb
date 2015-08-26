@@ -85,7 +85,7 @@ describe UsersController, type: :controller do
     describe 'when the record save successfully' do
       before { allow_any_instance_of(User).to receive(:valid?).and_return(true) }
 
-      it 'should save the user' do
+      it 'saves the user' do
         post :create, user_params
         expect(assigns(:user)).to be_persisted
       end

@@ -1,6 +1,6 @@
 module MicropostsHelper
   def wrap(content)
-    sanitize(raw(content.split.map{ |s| wrap_long_string(s) }.join(' ')))
+    sanitize(raw(content.split.map { |s| wrap_long_string(s) }.join(' ')))
   end
 
   private

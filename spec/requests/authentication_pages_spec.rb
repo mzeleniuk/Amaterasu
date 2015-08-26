@@ -108,6 +108,21 @@ describe 'Authentication' do
       end
     end
 
+    describe 'for non-activated users' do
+      let(:user) { FactoryGirl.create(:user, activated: false, activated_at: nil) }
+
+      before do
+        visit '/en/signin'
+        fill_in 'Email', with: user.email.upcase
+        fill_in 'Password', with: user.password
+        click_button 'Log in'
+      end
+
+      it 'shows activation reminder' do
+        expect(page).to have_text('Account not activated. Check your email for the activation link.')
+      end
+    end
+
     describe 'as wrong user' do
       let(:user) { FactoryGirl.create(:user) }
       let(:wrong_user) { FactoryGirl.create(:user, email: 'wrong@example.com') }
@@ -133,7 +148,7 @@ describe 'Authentication' do
       end
     end
 
-    describe 'for non-logged-in users' do
+    describe 'for logged-in users' do
       let(:user) { FactoryGirl.create(:user) }
 
       describe 'when attempting to visit a protected page' do
