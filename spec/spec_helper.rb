@@ -1,7 +1,11 @@
+require 'rubygems'
+
 require 'simplecov'
 SimpleCov.start
 
-require 'rubygems'
+require 'codeclimate-test-reporter'
+CodeClimate::TestReporter.start
+
 require 'factory_girl'
 require 'capybara/rspec'
 require 'database_cleaner'
