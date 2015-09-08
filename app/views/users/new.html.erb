@@ -8,7 +8,7 @@
       <%= render 'shared/error_messages', object: f.object %>
 
       <%= f.label :name, t('.name_html') %>
-      <%= f.text_field :name, placeholder: 'James Willson' %>
+      <%= f.text_field :name, placeholder: 'Solid Snake' %>
 
       <%= f.label :email, t('.email_html') %>
       <%= f.email_field :email, placeholder: 'user@example.com' %>
@@ -19,7 +19,8 @@
       <%= f.label :password_confirmation, t('.confirmation_html') %>
       <%= f.password_field :password_confirmation, placeholder: '••••••' %>
 
-      <%= f.submit t('.submit_html'), class: 'btn btn-large btn-block btn-primary button_font' %>
+      <%= f.submit t('.submit_html'), data: {disable_with: t('.signing_up_html')},
+                   class: 'btn btn-large btn-block btn-primary' %>
     <% end %>
   </div>
 </div>

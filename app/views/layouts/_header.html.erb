@@ -3,7 +3,7 @@
     <div class="container">
       <%= link_to image_tag('Logo.png'), root_path, id: 'logo_image' %>
       <nav>
-        <ul class="nav pull-right custom_font">
+        <ul class="nav pull-right">
           <% if signed_in? %>
             <li id="user_name_header">
               <%= image_tag(current_user.avatar.url, :class => 'avatar_header') %>

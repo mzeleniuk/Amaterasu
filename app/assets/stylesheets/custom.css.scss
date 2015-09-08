@@ -16,6 +16,14 @@ textarea {
   resize: vertical;
 }
 
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Light'), local('OpenSans-Light'),
+  url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
+}
+
 .center {
   text-align: center;
   h1 {
@@ -38,13 +46,6 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Light'), local('OpenSans-Light'),
-    url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
-  }
 }
 
 h1 {
@@ -92,16 +93,6 @@ p {
 #user_name_header {
   color: white;
   padding: 10px 25px;
-}
-
-.custom_font, .button_font {
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Light'), local('OpenSans-Light'),
-    url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTYraN7vELC11_xip9Rz-hMs.woff) format('woff');
-  }
 }
 
 #micropost_picture {

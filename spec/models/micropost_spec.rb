@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Micropost, :type => :model do
+RSpec.describe Micropost, type: :model do
   let(:user) { FactoryGirl.create(:user) }
 
   before { @micropost = user.microposts.build(content: 'Post content') }

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe User, :type => :model do
+RSpec.describe User, type: :model do
   before do
     @user = create :user
   end
@@ -14,7 +14,14 @@ RSpec.describe User, :type => :model do
   it { should respond_to(:password_confirmation) }
   it { should respond_to(:authenticate) }
   it { should respond_to(:remember_token) }
+  it { should respond_to(:remember) }
+  it { should respond_to(:forget) }
   it { should respond_to(:authenticate) }
+  it { should respond_to(:activate) }
+  it { should respond_to(:send_activation_email) }
+  it { should respond_to(:create_reset_digest) }
+  it { should respond_to(:send_password_reset_email) }
+  it { should respond_to(:password_reset_expired?) }
   it { should respond_to(:admin) }
   it { should respond_to(:microposts) }
   it { should respond_to(:feed) }
@@ -154,19 +161,6 @@ RSpec.describe User, :type => :model do
     it 'should have the right microposts in the right order' do
       expect(@user.microposts.to_a).to eq [newer_micropost, older_micropost]
     end
-
-    describe 'status' do
-      let(:unfollowed_post) do
-        FactoryGirl.create(:micropost, user: FactoryGirl.create(:user))
-      end
-
-      let(:followed_user) { FactoryGirl.create(:user) }
-
-      before do
-        @user.follow(followed_user)
-        3.times { followed_user.microposts.create!(content: 'My content') }
-      end
-    end
   end
 
   describe 'following' do
@@ -188,5 +182,34 @@ RSpec.describe User, :type => :model do
         expect(@user).to_not be_following(other_user)
       end
     end
+  end
+
+  describe '#remember' do
+    let(:user) { build :user }
+
+    it { expect { user.send(:remember) }.to change { user.remember_digest }.from(nil).to(String) }
+  end
+
+  describe '#forget' do
+    let(:user) { build :user }
+
+    before do
+      user.send(:remember)
+    end
+
+    it { expect { user.send(:forget) }.to change { user.remember_digest }.from(String).to(nil) }
+  end
+
+  describe '#activate' do
+    let(:user) { build :user, activated: false, activated_at: nil }
+
+    it { expect { user.send(:activate) }.to change { user.activated }.from(false).to(true) }
+    it { expect { user.send(:activate) }.to change { user.activated_at }.from(nil).to(Time) }
+  end
+
+  describe '#create_reset_digest' do
+    let(:user) { build :user }
+
+    it { expect { user.send(:create_reset_digest) }.to change { user.reset_digest }.from(nil).to(String) }
   end
 end

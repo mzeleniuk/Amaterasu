@@ -74,11 +74,13 @@ en:
       forgot_html: "Forgot password?"
       email_html: "Your email"
       submit_html: "Submit"
+      submitting_html: "Submitting..."
     edit:
       reset_html: "Reset password"
       new_html: "New password"
       confirm_html: "Confirm password"
       update_html: "Update password"
+      updating_html: "Updating password..."
 
   sessions:
     new:
@@ -87,6 +89,7 @@ en:
       password_html: "Password"
       remember_html: "Remember me"
       submit_html: "Log in"
+      logging_in_html: "Logging in..."
       forgot_html: "Forgot password?"
       signup1_html: "New user?"
       signup2_html: "Sign up now!"
@@ -102,6 +105,7 @@ en:
     micropost_form:
       textarea_html: "Your text..."
       post_html: "Create Post"
+      posting_html: "Creating Post..."
       alert_html: "Maximum file size is 2 MB. Please choose a smaller file."
     stats:
       following_html: "You are following"
@@ -129,11 +133,13 @@ en:
       confirmation_html: "Confirm new password"
       current_html: "Your current password"
       save_html: "Update profile"
+      saving_html: "Updating profile..."
       alert_html: "Maximum file size is 2 MB. Please choose a smaller file."
     index:
       title_html: "All users"
       name_html: "User name"
       search_html: "Search"
+      searching_html: "Searching..."
       result_html: "Your search returned no results"
     new:
       title_html: "Sign up"
@@ -142,6 +148,7 @@ en:
       password_html: "Password"
       confirmation_html: "Confirm password"
       submit_html: "Create my account"
+      signing_up_html: "Creating your account..."
 
     show:
       posts_html: "Posts:"

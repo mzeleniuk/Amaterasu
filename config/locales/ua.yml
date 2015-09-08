@@ -76,11 +76,13 @@ ua:
       forgot_html: "Забули свій пароль?"
       email_html: "Ваша електронна пошта"
       submit_html: "Підтвердити"
+      submitting_html: "Підтвердження..."
     edit:
       reset_html: "Скидання паролю"
       new_html: "Ваш новий пароль"
       confirm_html: "Підтвердження паролю"
       update_html: "Оновити пароль"
+      updating_html: "Оновлення паролю..."
 
   sessions:
     new:
@@ -89,6 +91,7 @@ ua:
       password_html: "Пароль"
       remember_html: "Запам’ятати мене"
       submit_html: "Увійти"
+      logging_in_html: "Вхід..."
       forgot_html: "Забули пароль?"
       signup1_html: "Ви ще не зареєстровані?"
       signup2_html: "Заповніть реєстраційну форму тут!"
@@ -104,6 +107,7 @@ ua:
     micropost_form:
       textarea_html: "Текст публікації..."
       post_html: "Опублікувати"
+      posting_html: "Створення публікації..."
       alert_html: "Максимальний розмір файлу не повинен перевищувати 2 мегабайти.
                   Будь ласка, оберіть зображення меншого розміру."
     stats:
@@ -132,12 +136,14 @@ ua:
       confirmation_html: "Підтвердження паролю"
       current_html: "Ваш поточний пароль"
       save_html: "Зберегти зміни"
+      saving_html: "Збереження змін..."
       alert_html: "Максимальний розмір файлу не повинен перевищувати 2 мегабайти.
                   Будь ласка, оберіть зображення меншого розміру."
     index:
       title_html: "Всі користувачі"
       name_html: "Ім’я користувача"
-      search_html: "Пошук"
+      search_html: "Знайти"
+      searching_html: "Пошук..."
       result_html: "Ваш запит не дав результатів"
     new:
       title_html: "Реєстрація"
@@ -146,6 +152,7 @@ ua:
       password_html: "Пароль"
       confirmation_html: "Підтвердження паролю"
       submit_html: "Створити обліковий запис"
+      signing_up_html: "Створення облікового запису..."
 
     show:
       posts_html: "Публікацій:"

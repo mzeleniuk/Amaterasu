@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Relationship, :type => :model do
+RSpec.describe Relationship, type: :model do
   let(:follower) { FactoryGirl.create(:user) }
   let(:followed) { FactoryGirl.create(:user) }
   let(:relationship) { follower.active_relationships.build(followed_id: followed.id) }

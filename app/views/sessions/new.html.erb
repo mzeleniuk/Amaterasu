@@ -16,7 +16,8 @@
         <span><%= t('.remember_html') %></span>
       <% end %>
 
-      <%= f.submit t('.submit_html'), class: 'btn btn-large btn-block btn-primary button_font' %>
+      <%= f.submit t('.submit_html'), data: {disable_with: t('.logging_in_html')},
+                   class: 'btn btn-large btn-block btn-primary' %>
     <% end %>
 
     <div class="offset2">

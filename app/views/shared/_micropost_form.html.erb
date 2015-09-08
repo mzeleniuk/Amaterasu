@@ -1,19 +1,24 @@
-<%= form_for(@micropost, html: { multipart: true }) do |f| %>
+<%= form_for(@micropost, html: {multipart: true}) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="field custom_font">
+
+  <div class="field">
     <%= f.text_area :content, placeholder: t('.textarea_html') %>
   </div>
+
   <span class="picture">
     <%= f.file_field :picture, accept: 'image/jpeg, image/gif, image/png' %>
   </span>
-  <%= f.submit t('.post_html'), class: 'btn btn-large btn-block btn-primary button_font' %>
+
+  <%= f.submit t('.post_html'), data: {disable_with: t('.posting_html')},
+               class: 'btn btn-large btn-block btn-primary' %>
 <% end %>
 
 <script type="text/javascript">
   $('#micropost_picture').bind('change', function() {
-    var size_in_megabytes = this.files[0].size/1024/1024;
-      if (size_in_megabytes > 2) {
-        alert(<%= t('.alert_html') %>);
-      }
+    var size_in_megabytes = this.files[0].size / 1024 / 1024;
+
+    if (size_in_megabytes > 2) {
+      alert(<%= t('.alert_html') %>);
+    }
   });
 </script>
