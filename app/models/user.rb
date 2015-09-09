@@ -13,7 +13,9 @@ class User < ActiveRecord::Base
 
   before_save :downcase_email
   before_create :create_activation_digest
-  validates :name, presence: true, length: {maximum: 50}
+
+  validates :first_name, presence: true, length: {maximum: 25}
+  validates :last_name, presence: true, length: {maximum: 25}
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
@@ -23,6 +25,10 @@ class User < ActiveRecord::Base
   validate :avatar_size
 
   has_secure_password
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 
   def User.new_remember_token
     SecureRandom.urlsafe_base64
@@ -109,7 +115,7 @@ class User < ActiveRecord::Base
 
   def self.search(search)
     if search
-      find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+      find(:all, conditions: ["first_name || ' ' || last_name LIKE ?", "%#{search}%"])
     else
       all
     end

@@ -7,7 +7,7 @@
           <% if signed_in? %>
             <li id="user_name_header">
               <%= image_tag(current_user.avatar.url, :class => 'avatar_header') %>
-              <%= current_user.name %>
+              <%= current_user.full_name %>
             </li>
           <% end %>
           <li>

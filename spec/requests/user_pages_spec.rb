@@ -27,7 +27,7 @@ describe 'User pages' do
 
       it 'lists each user' do
         User.paginate(page: 1).each do |user|
-          expect(page).to have_selector('li', text: user.name)
+          expect(page).to have_selector('li', text: user.full_name)
         end
       end
     end
@@ -74,7 +74,8 @@ describe 'User pages' do
 
     describe 'with valid information' do
       before do
-        fill_in 'User name', with: 'Example User'
+        fill_in 'First name', with: 'Example'
+        fill_in 'Last name', with: 'User'
         fill_in 'Email', with: 'user@example.com'
         fill_in 'Password', with: 'foobar'
         fill_in 'Confirm password', with: 'foobar'
@@ -103,8 +104,8 @@ describe 'User pages' do
       click_button 'Log in'
     end
 
-    it { expect(page).to have_content(user.name) }
-    it { expect(page).to have_title(user.name) }
+    it { expect(page).to have_content(user.full_name) }
+    it { expect(page).to have_title(user.full_name) }
 
     describe 'follow/unfollow buttons' do
       let(:other_user) { FactoryGirl.create(:user) }
@@ -209,6 +210,8 @@ describe 'User pages' do
 
   describe 'with valid information' do
     let(:user) { FactoryGirl.create(:user) }
+    let(:new_first_name) { 'New' }
+    let(:new_last_name) { 'Name' }
     let(:new_name) { 'New Name' }
     let(:new_email) { 'new@example.com' }
 
@@ -220,7 +223,8 @@ describe 'User pages' do
 
       visit edit_user_path(user)
 
-      fill_in 'User name', with: new_name
+      fill_in 'First name', with: new_first_name
+      fill_in 'Last name', with: new_last_name
       fill_in 'Email', with: new_email
       fill_in 'Your current password', with: user.password
       click_button 'Update profile'
@@ -230,7 +234,8 @@ describe 'User pages' do
     it { should have_selector('div.alert.alert-success') }
     it { should have_link('Account') }
 
-    specify { expect(user.reload.name).to eq new_name }
+    specify { expect(user.reload.first_name).to eq new_first_name }
+    specify { expect(user.reload.last_name).to eq new_last_name }
     specify { expect(user.reload.email).to eq new_email }
   end
 
@@ -248,8 +253,8 @@ describe 'User pages' do
       visit user_path(user)
     end
 
-    it { should have_content(user.name) }
-    it { should have_title(user.name) }
+    it { should have_content(user.full_name) }
+    it { should have_title(user.full_name) }
 
     describe 'microposts' do
       it { should have_content(m1.content) }
@@ -276,7 +281,7 @@ describe 'User pages' do
 
       it { should have_title('Following') }
       it { should have_selector('h3', text: 'Following') }
-      it { should have_link(other_user.name) }
+      it { should have_link(other_user.full_name) }
     end
 
     describe 'followers' do
@@ -291,7 +296,7 @@ describe 'User pages' do
 
       it { should have_title('Followers') }
       it { should have_selector('h3', text: 'Followers') }
-      it { should have_link(user.name) }
+      it { should have_link(user.full_name) }
     end
   end
 end

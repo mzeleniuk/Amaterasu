@@ -14,8 +14,11 @@
 
         <div class="tab-content">
           <div id="sectionA" class="tab-pane fade in active">
-            <%= f.label :name, t('.name_html') %>
-            <%= f.text_field :name %>
+            <%= f.label :first_name, t('.first_name_html') %>
+            <%= f.text_field :first_name %>
+
+            <%= f.label :last_name, t('.last_name_html') %>
+            <%= f.text_field :last_name %>
 
             <%= f.label :email, t('.email_html') %>
             <%= f.email_field :email %>

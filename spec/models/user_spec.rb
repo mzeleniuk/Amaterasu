@@ -7,7 +7,15 @@ RSpec.describe User, type: :model do
 
   subject { @user }
 
-  it { should respond_to(:name) }
+  it { should respond_to(:first_name) }
+  it { should respond_to(:last_name) }
+  it { should respond_to(:gender) }
+  it { should respond_to(:date_of_birth) }
+  it { should respond_to(:country) }
+  it { should respond_to(:city) }
+  it { should respond_to(:address) }
+  it { should respond_to(:phone_number) }
+  it { should respond_to(:bio) }
   it { should respond_to(:email) }
   it { should respond_to(:password_digest) }
   it { should respond_to(:password) }
@@ -45,8 +53,14 @@ RSpec.describe User, type: :model do
     it { should be_admin }
   end
 
-  describe 'when name is not present' do
-    before { @user.name = ' ' }
+  describe 'when first name is not present' do
+    before { @user.first_name = ' ' }
+
+    it { should_not be_valid }
+  end
+
+  describe 'when last name is not present' do
+    before { @user.last_name = ' ' }
 
     it { should_not be_valid }
   end
@@ -57,8 +71,14 @@ RSpec.describe User, type: :model do
     it { should_not be_valid }
   end
 
-  describe 'when name is too long' do
-    before { @user.name = 'a' * 51 }
+  describe 'when first name is too long' do
+    before { @user.first_name = 'a' * 51 }
+
+    it { should_not be_valid }
+  end
+
+  describe 'when last name is too long' do
+    before { @user.last_name = 'a' * 51 }
 
     it { should_not be_valid }
   end

@@ -7,8 +7,11 @@
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
-      <%= f.label :name, t('.name_html') %>
-      <%= f.text_field :name, placeholder: 'Solid Snake' %>
+      <%= f.label :first_name, t('.first_name_html') %>
+      <%= f.text_field :first_name, placeholder: 'Snake' %>
+
+      <%= f.label :last_name, t('.last_name_html') %>
+      <%= f.text_field :last_name, placeholder: 'Solid' %>
 
       <%= f.label :email, t('.email_html') %>
       <%= f.email_field :email, placeholder: 'user@example.com' %>

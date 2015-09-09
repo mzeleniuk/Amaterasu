@@ -2,7 +2,7 @@
   <%= image_tag(micropost.user.avatar.url, :class => 'avatar') %>
 
   <span class="user">
-    <%= link_to micropost.user.name, micropost.user %>
+    <%= link_to micropost.user.full_name, micropost.user %>
   </span>
 
   <span class="content">

@@ -19,7 +19,6 @@ gem 'jquery-rails', '3.0.4'
 gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 gem 'sprockets', '2.11.0'
-gem 'slim', '2.0.0'
 
 # Code coverage
 gem 'simplecov', '0.10.0', require: false, group: :test

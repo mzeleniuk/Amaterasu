@@ -1,28 +1,35 @@
 <% provide(:title, @title) %>
+
 <div class="row">
   <aside class="span4">
     <section>
-      <%= image_tag(@user.avatar.url, :class => 'avatar') %>
-      <h1><%= link_to @user.name, @user %></h1>
+      <%= image_tag(@user.avatar.url, class: 'avatar') %>
+      <h1><%= link_to @user.full_name, @user %></h1>
+
       <span><b><%= t('.posts_html') %></b> <%= @user.microposts.count %></span>
     </section>
+
     <section>
       <%= render 'shared/stats' %>
+
       <% if @users.any? %>
         <div class="user_avatars">
           <% @users.each do |user| %>
-            <%= link_to image_tag(user.avatar.url, :class => 'avatar_feed'), user %>
+            <%= link_to image_tag(user.avatar.url, class: 'avatar_feed'), user %>
           <% end %>
         </div>
       <% end %>
     </section>
   </aside>
+
   <div class="span8">
     <h3><%= @title %></h3>
+
     <% if @users.any? %>
       <ul class="users">
         <%= render @users %>
       </ul>
+
       <%= will_paginate %>
     <% end %>
   </div>

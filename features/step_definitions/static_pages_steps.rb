@@ -3,7 +3,7 @@ Given /^User visits home page$/ do
 end
 
 Then /^He should see text '(.+)'$/ do |text|
-  expect(page).to have_content(text)
+  expect(page).to have_text(text)
 end
 
 And /^He should see a '(.+)' link$/ do |text|

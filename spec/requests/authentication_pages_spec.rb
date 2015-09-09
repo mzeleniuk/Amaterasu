@@ -41,7 +41,7 @@ describe 'Authentication' do
       click_button 'Log in'
     end
 
-    it { expect(page).to have_title("Amaterasu | #{user.name}") }
+    it { expect(page).to have_title("Amaterasu | #{user.full_name}") }
     it { expect(page).to have_link('Account') }
     it { expect(page).to_not have_link('Log in', href: signin_path) }
 
@@ -161,7 +161,7 @@ describe 'Authentication' do
 
         describe 'after logging in' do
           it 'should render the desired protected page' do
-            expect(page).to have_title("Amaterasu | #{user.name}")
+            expect(page).to have_title("Amaterasu | #{user.full_name}")
           end
 
           describe 'when signing in again' do
@@ -176,7 +176,7 @@ describe 'Authentication' do
             end
 
             it 'renders the default (profile) page' do
-              expect(page).to have_title("Amaterasu | #{user.name}")
+              expect(page).to have_title("Amaterasu | #{user.full_name}")
             end
           end
         end

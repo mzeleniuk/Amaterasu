@@ -1,7 +1,7 @@
 <li id="<%= feed_item.id %>">
   <%= image_tag(feed_item.user.avatar.url, :class => 'avatar') %>
   <span class="user">
-    <%= link_to feed_item.user.name, feed_item.user %>
+    <%= link_to feed_item.user.full_name, feed_item.user %>
   </span>
   <span class="content"><%= feed_item.content %></span>
   <span class="timestamp">

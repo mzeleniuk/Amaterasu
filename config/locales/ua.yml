@@ -130,7 +130,8 @@ ua:
       header_html: "Оновіть дані Вашого профілю"
       profile_html: "Профіль"
       security_html: "Безпека"
-      name_html: "Ім’я користувача"
+      first_name_html: "Ім’я"
+      last_name_html: "Прізвище"
       email_html: "Електронна пошта"
       password_html: "Новий пароль"
       confirmation_html: "Підтвердження паролю"
@@ -147,7 +148,8 @@ ua:
       result_html: "Ваш запит не дав результатів"
     new:
       title_html: "Реєстрація"
-      name_html: "Ім’я користувача"
+      first_name_html: "Ім’я"
+      last_name_html: "Прізвище"
       email_html: "Електронна пошта"
       password_html: "Пароль"
       confirmation_html: "Підтвердження паролю"
@@ -298,7 +300,8 @@ ua:
   activerecord:
     attributes:
       user:
-        name: "Поле 'Ім’я користувача'"
+        first_name: "Поле 'Ім’я'"
+        last_name: "Поле 'Прізвище'"
         email: "Поле 'Електронна пошта'"
         password: "Пароль"
         password_confirmation: "Підтвердження паролю"
