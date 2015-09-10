@@ -83,6 +83,12 @@ RSpec.describe User, type: :model do
     it { should_not be_valid }
   end
 
+  describe 'when gender is incorrect' do
+    before { @user.gender = 'Wrong' }
+
+    it { should_not be_valid }
+  end
+
   describe 'when email format is invalid' do
     it 'should be invalid' do
       addresses = %w[user@foo,com user_at_foo.org example.user@foo.foo@bar_baz.com foo@bar+baz.com]

@@ -23,6 +23,29 @@
             <%= f.label :email, t('.email_html') %>
             <%= f.email_field :email %>
 
+            <%= f.label :phone_number, t('.phone_number_html') %>
+            <%= f.telephone_field :phone_number %>
+
+            <%= f.label :gender, t('.gender_html') %>
+            <%= f.select :gender, options_for_select([[t('users.gender_options.male'), 'Male'],
+                                                      [t('users.gender_options.female'), 'Female']], @user.gender),
+                         prompt: t('.select_gender_html') %>
+
+            <%= f.label :date_of_birth, t('.date_of_birth_html') %>
+            <%= f.date_field :date_of_birth %>
+
+            <%= f.label :country, t('.country_html') %>
+            <%= f.text_field :country %>
+
+            <%= f.label :city, t('.city_html') %>
+            <%= f.text_field :city %>
+
+            <%= f.label :address, t('.address_html') %>
+            <%= f.text_field :address %>
+
+            <%= f.label :bio, t('.bio_html') %>
+            <%= f.text_area :bio %>
+
             <%= image_tag(@user.avatar.url, class: 'avatar', style: 'margin-bottom: 10px;') %>
             <span class="picture">
               <%= f.file_field :avatar, accept: 'image/jpeg, image/gif, image/png' %>

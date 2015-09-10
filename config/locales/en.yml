@@ -107,6 +107,9 @@ en:
       post_html: "Create Post"
       posting_html: "Creating Post..."
       alert_html: "Maximum file size is 2 MB. Please choose a smaller file."
+    personal_info:
+      personal_info_html: "Personal information"
+      no_info_html: "Personal information is not provided"
     stats:
       following_html: "You are following"
       users_html: "users"
@@ -130,6 +133,14 @@ en:
       first_name_html: "First name"
       last_name_html: "Last name"
       email_html: "Email"
+      phone_number_html: "Phone number"
+      gender_html: "Gender"
+      select_gender_html: "Select gender"
+      date_of_birth_html: "Date of birth"
+      country_html: "Country"
+      city_html: "City"
+      address_html: "Address"
+      bio_html: "About me"
       password_html: "New password"
       confirmation_html: "Confirm new password"
       current_html: "Your current password"
@@ -151,12 +162,14 @@ en:
       confirmation_html: "Confirm password"
       submit_html: "Create my account"
       signing_up_html: "Creating your account..."
-
     show:
       posts_html: "Posts:"
       activity_html: "Posts"
     show_follow:
       posts_html: "Posts:"
+    gender_options:
+      male: "Male"
+      female: "Female"
 
   datetime:
     distance_in_words:

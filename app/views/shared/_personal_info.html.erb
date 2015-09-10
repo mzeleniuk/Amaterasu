@@ -1,0 +1,70 @@
+<div class="accordion">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle center" data-toggle="collapse" href="#collapseOne">
+        <%= t('.personal_info_html') %>
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <blockquote>
+          <% if @user.phone_number.present? %>
+            <p class="text-info"><%= t('users.edit.phone_number_html') %></p>
+            <%= @user.phone_number %>
+          <% end %>
+        </blockquote>
+
+        <blockquote>
+          <% if @user.gender.present? %>
+            <p class="text-info"><%= t('users.edit.gender_html') %></p>
+            <% if @user.gender == 'Male' %>
+              <%= t('users.gender_options.male') %>
+            <% else %>
+              <%= t('users.gender_options.female') %>
+            <% end %>
+          <% end %>
+        </blockquote>
+
+        <blockquote>
+          <% if @user.date_of_birth.present? %>
+            <p class="text-info"><%= t('users.edit.date_of_birth_html') %></p>
+            <%= @user.date_of_birth %>
+          <% end %>
+        </blockquote>
+
+        <blockquote>
+          <% if @user.country.present? %>
+            <p class="text-info"><%= t('users.edit.country_html') %></p>
+            <%= @user.country %>
+          <% end %>
+        </blockquote>
+
+        <blockquote>
+          <% if @user.city.present? %>
+            <p class="text-info"><%= t('users.edit.city_html') %></p>
+            <%= @user.city %>
+          <% end %>
+        </blockquote>
+
+        <blockquote>
+          <% if @user.address.present? %>
+            <p class="text-info"><%= t('users.edit.address_html') %></p>
+            <%= @user.address %>
+          <% end %>
+        </blockquote>
+
+        <blockquote>
+          <% if @user.bio.present? %>
+            <p class="text-info"><%= t('users.edit.bio_html') %></p>
+            <%= @user.bio %>
+          <% end %>
+        </blockquote>
+
+        <% if !@user.phone_number.present? && !@user.gender.present? && !@user.date_of_birth.present? &&
+                !@user.country.present? && !@user.city.present? && !@user.address.present? && !@user.bio.present? %>
+          <p><em><%= t('.no_info_html') %></em></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

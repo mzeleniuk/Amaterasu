@@ -110,6 +110,9 @@ ua:
       posting_html: "Створення публікації..."
       alert_html: "Максимальний розмір файлу не повинен перевищувати 2 мегабайти.
                   Будь ласка, оберіть зображення меншого розміру."
+    personal_info:
+      personal_info_html: "Особиста інформація"
+      no_info_html: "Особиста інформація відсутня"
     stats:
       following_html: "Ви читаєте"
       users_html: "користувачів"
@@ -133,6 +136,14 @@ ua:
       first_name_html: "Ім’я"
       last_name_html: "Прізвище"
       email_html: "Електронна пошта"
+      phone_number_html: "Телефон"
+      gender_html: "Стать"
+      select_gender_html: "Оберіть стать"
+      date_of_birth_html: "Дата народження"
+      country_html: "Країна"
+      city_html: "Місто"
+      address_html: "Адреса"
+      bio_html: "Про мене"
       password_html: "Новий пароль"
       confirmation_html: "Підтвердження паролю"
       current_html: "Ваш поточний пароль"
@@ -155,12 +166,14 @@ ua:
       confirmation_html: "Підтвердження паролю"
       submit_html: "Створити обліковий запис"
       signing_up_html: "Створення облікового запису..."
-
     show:
       posts_html: "Публікацій:"
       activity_html: "Публікації"
     show_follow:
       posts_html: "Публікацій:"
+    gender_options:
+      male: "Чоловік"
+      female: "Жінка"
 
   datetime:
     distance_in_words:
