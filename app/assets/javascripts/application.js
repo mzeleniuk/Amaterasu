@@ -15,4 +15,8 @@
 //= require bootstrap
 //= require pace/pace.min.js
 //= require turbolinks
+//= require bootstrap-datepicker
+//= require bootstrap-datepicker/core
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.fr.js
 //= require_tree .

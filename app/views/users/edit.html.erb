@@ -32,7 +32,7 @@
                          prompt: t('.select_gender_html') %>
 
             <%= f.label :date_of_birth, t('.date_of_birth_html') %>
-            <%= f.date_field :date_of_birth %>
+            <%= f.date_field :date_of_birth, class: 'date_picker', placeholder: 'yyyy-mm-dd' %>
 
             <%= f.label :country, t('.country_html') %>
             <%= f.text_field :country %>
@@ -79,5 +79,17 @@
     if (size_in_megabytes > 2) {
       alert(<%= t('.alert_html') %>);
     }
+  });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.date_picker').datepicker({
+      format: 'yyyy-mm-dd',
+      startView: 2,
+      todayBtn: true,
+      autoclose: true,
+      todayHighlight: true
+    });
   });
 </script>
