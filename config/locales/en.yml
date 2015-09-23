@@ -132,6 +132,7 @@ en:
       header_html: "Update your profile"
       profile_html: "Profile"
       security_html: "Security"
+      personal_info_html: "Personal information"
       first_name_html: "First name"
       last_name_html: "Last name"
       email_html: "Email"

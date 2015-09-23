@@ -135,6 +135,7 @@ ua:
       header_html: "Оновіть дані Вашого профілю"
       profile_html: "Профіль"
       security_html: "Безпека"
+      personal_info_html: "Особиста інформація"
       first_name_html: "Ім’я"
       last_name_html: "Прізвище"
       email_html: "Електронна пошта"
@@ -321,3 +322,5 @@ ua:
         password: "Пароль"
         password_confirmation: "Підтвердження паролю"
         current_password: "Поточний пароль"
+      micropost:
+        content: "Текст публікації"

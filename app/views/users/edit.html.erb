@@ -10,6 +10,7 @@
       <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#sectionA"><%= t('.profile_html') %></a></li>
         <li><a data-toggle="tab" href="#sectionB"><%= t('.security_html') %></a></li>
+        <li><a data-toggle="tab" href="#sectionC"><%= t('.personal_info_html') %></a></li>
       </ul>
 
         <div class="tab-content">
@@ -23,6 +24,22 @@
             <%= f.label :email, t('.email_html') %>
             <%= f.email_field :email %>
 
+            <%= image_tag(@user.avatar.url, class: 'avatar', style: 'margin-bottom: 10px;') %>
+            <span class="picture">
+              <%= f.file_field :avatar, accept: 'image/jpeg, image/gif, image/png' %>
+            </span>
+            <%= f.hidden_field :avatar_cache %>
+          </div>
+
+          <div id="sectionB" class="tab-pane fade">
+            <%= f.label :password, t('.password_html') %>
+            <%= f.password_field :password, placeholder: '••••••' %>
+
+            <%= f.label :password_confirmation, t('.confirmation_html') %>
+            <%= f.password_field :password_confirmation, placeholder: '••••••' %>
+          </div>
+
+          <div id="sectionC" class="tab-pane fade">
             <%= f.label :phone_number, t('.phone_number_html') %>
             <%= f.telephone_field :phone_number %>
 
@@ -45,20 +62,6 @@
 
             <%= f.label :bio, t('.bio_html') %>
             <%= f.text_area :bio %>
-
-            <%= image_tag(@user.avatar.url, class: 'avatar', style: 'margin-bottom: 10px;') %>
-            <span class="picture">
-              <%= f.file_field :avatar, accept: 'image/jpeg, image/gif, image/png' %>
-            </span>
-            <%= f.hidden_field :avatar_cache %>
-          </div>
-
-          <div id="sectionB" class="tab-pane fade">
-            <%= f.label :password, t('.password_html') %>
-            <%= f.password_field :password, placeholder: '••••••' %>
-
-            <%= f.label :password_confirmation, t('.confirmation_html') %>
-            <%= f.password_field :password_confirmation, placeholder: '••••••' %>
           </div>
         </div>
 

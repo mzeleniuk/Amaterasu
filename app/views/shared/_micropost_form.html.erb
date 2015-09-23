@@ -9,8 +9,8 @@
     <h3 id="createPostLabel"><%= t('.post_html') %></h3>
   </div>
 
-  <div class="modal-body">
-    <%= form_for(@micropost, html: {multipart: true}) do |f| %>
+  <%= form_for(@micropost, html: {multipart: true}) do |f| %>
+    <div class="modal-body">
       <%= render 'shared/error_messages', object: f.object %>
 
       <div class="field">
@@ -20,14 +20,14 @@
       <span class="picture">
         <%= f.file_field :picture, accept: 'image/jpeg, image/gif, image/png' %>
       </span>
-  </div>
+    </div>
 
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true"><%= t('.cancel_html') %></button>
-    <%= f.submit t('.post_now_html'), data: {disable_with: t('.posting_html')},
-                 class: 'btn btn-primary' %>
-  </div>
-    <% end %>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true"><%= t('.cancel_html') %></button>
+      <%= f.submit t('.post_now_html'), data: {disable_with: t('.posting_html')},
+                   class: 'btn btn-primary' %>
+    </div>
+  <% end %>
 </div>
 
 <% if @micropost.errors.any? %>
