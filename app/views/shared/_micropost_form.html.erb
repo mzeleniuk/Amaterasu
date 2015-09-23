@@ -1,17 +1,48 @@
-<%= form_for(@micropost, html: {multipart: true}) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
+<a href="#createPost" role="button" class="btn btn-large btn-block btn-primary" data-toggle="modal">
+  <i class="icon-comment icon-white"></i>
+  <%= t('shared.micropost_form.post_html') %>
+</a>
 
-  <div class="field">
-    <%= f.text_area :content, placeholder: t('.textarea_html') %>
+<div id="createPost" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="createPostLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="createPostLabel"><%= t('.post_html') %></h3>
   </div>
 
-  <span class="picture">
-    <%= f.file_field :picture, accept: 'image/jpeg, image/gif, image/png' %>
-  </span>
+  <div class="modal-body">
+    <%= form_for(@micropost, html: {multipart: true}) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
 
-  <%= f.submit t('.post_html'), data: {disable_with: t('.posting_html')},
-               class: 'btn btn-large btn-block btn-primary' %>
+      <div class="field">
+        <%= f.text_area :content, placeholder: t('.textarea_html') %>
+      </div>
+
+      <span class="picture">
+        <%= f.file_field :picture, accept: 'image/jpeg, image/gif, image/png' %>
+      </span>
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true"><%= t('.cancel_html') %></button>
+    <%= f.submit t('.post_now_html'), data: {disable_with: t('.posting_html')},
+                 class: 'btn btn-primary' %>
+  </div>
+    <% end %>
+</div>
+
+<% if @micropost.errors.any? %>
+  <script>
+    $('#createPost').modal('show')
+  </script>
 <% end %>
+
+<script>
+  $("#createPost").on("show", function () {
+    $("body").addClass("modal-open");
+  }).on("hidden", function () {
+    $("body").removeClass("modal-open")
+  });
+</script>
 
 <script type="text/javascript">
   $('#micropost_picture').bind('change', function() {

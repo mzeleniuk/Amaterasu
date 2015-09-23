@@ -105,6 +105,8 @@ en:
     micropost_form:
       textarea_html: "Your text..."
       post_html: "Create Post"
+      cancel_html: "Cancel"
+      post_now_html: "Post"
       posting_html: "Creating Post..."
       alert_html: "Maximum file size is 2 MB. Please choose a smaller file."
     personal_info:

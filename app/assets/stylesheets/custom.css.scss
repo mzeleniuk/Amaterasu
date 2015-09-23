@@ -443,3 +443,8 @@ span.picture {
     transform: rotate(360deg);
   }
 }
+
+/* Prevent scrolling when a modal is opened */
+body.modal-open {
+  overflow: hidden;
+}

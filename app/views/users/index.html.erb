@@ -9,7 +9,7 @@
         <%= search_field_tag :search, params[:search], placeholder: t('.name_html'), size: 30 %>
       </div>
 
-      <div style="float: left;">
+      <div style="float: left; padding-left: 20px;">
         <%= submit_tag t('.search_html'), name: nil, data: {disable_with: t('.searching_html')},
                        class: 'btn btn-primary' %>
       </div>

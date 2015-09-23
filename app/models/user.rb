@@ -87,8 +87,11 @@ class User < ActiveRecord::Base
     reset_sent_at < 2.hours.ago
   end
 
+  # Returns a user's status feed
   def feed
-    Micropost.from_users_followed_by(self)
+    following_ids_subselect = 'SELECT followed_id FROM relationships WHERE  follower_id = :user_id'
+    Micropost.where("user_id IN (#{following_ids_subselect})
+                     OR user_id = :user_id", user_id: id)
   end
 
   def follow(other_user)
