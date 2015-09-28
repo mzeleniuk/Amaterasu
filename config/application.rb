@@ -19,6 +19,6 @@ module Amaterasu
 
     config.serve_static_assets = true
 
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif .svg .eot .woff .ttf)
   end
 end
