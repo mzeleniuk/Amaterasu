@@ -36,6 +36,10 @@ textarea {
   border: 0;
 }
 
+.carousel {
+  margin-top: 30px;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -238,15 +242,12 @@ aside {
   }
 }
 
-span.picture {
-  margin-top: 10px;
-  input {
-    border: 0;
-  }
-}
-
 /* Prevent scrolling when a modal is opened */
 
 body.modal-open {
   overflow: hidden;
+}
+
+.modal-footer {
+  background-color: transparent;
 }
