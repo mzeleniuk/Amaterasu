@@ -1,12 +1,19 @@
 <% provide(:title, t('.help_html')) %>
-<h1><%= t('.help_html') %></h1>
-<p>
-  <%= t('.paragraph1_html') %>
-  <a href="http://rubyonrails.org/">Ruby on Rails</a>.
-</p>
-<p><%= t('.paragraph2_html') %></p>
-<p><%= t('.paragraph3_html') %></p>
-<p>
-  <%= t('.paragraph4_html') %>
-  <%= link_to t('.contacts_html'), contact_path %>.
-</p>
+
+<h1 class="animated fadeInDown"><%= t('.help_html') %></h1>
+
+<div class="animated fadeInUp">
+  <p>
+    <%= t('.paragraph1_html') %>
+    <a href="http://rubyonrails.org/">Ruby on Rails</a>.
+  </p>
+
+  <p><%= t('.paragraph2_html') %></p>
+
+  <p><%= t('.paragraph3_html') %></p>
+
+  <p>
+    <%= t('.paragraph4_html') %>
+    <%= link_to t('.contacts_html'), contact_path %>.
+  </p>
+</div>

@@ -1,6 +1,6 @@
 <%= image_tag(current_user.avatar.url, class: 'avatar') %>
 
-<h1><%= link_to current_user.full_name, current_user %></h1>
+<h1 class="animated fadeInDown"><%= link_to current_user.full_name, current_user %></h1>
 
 <span>
   <b><%= t('.posts_html') %></b> <%= current_user.microposts.count %>

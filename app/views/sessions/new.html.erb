@@ -1,9 +1,9 @@
 <% provide(:title, t('.login_html')) %>
 
-<h1><%= t('.login_html') %></h1>
+<h1 class="animated fadeInDown"><%= t('.login_html') %></h1>
 
 <div class="row">
-  <div class="span6 offset3">
+  <div class="span6 offset3 animated fadeInRight">
     <%= form_for(:session, url: sessions_path) do |f| %>
       <%= f.label :email, t('.email_html') %>
       <%= f.email_field :email, placeholder: 'user@example.com' %>

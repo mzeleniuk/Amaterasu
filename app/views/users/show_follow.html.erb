@@ -1,10 +1,10 @@
 <% provide(:title, @title) %>
 
-<div class="row">
+<div class="row animated fadeIn">
   <aside class="span4">
     <section>
       <%= image_tag(@user.avatar.url, class: 'avatar') %>
-      <h1><%= link_to @user.full_name, @user %></h1>
+      <h1 class="animated fadeInDown"><%= link_to @user.full_name, @user %></h1>
 
       <span><b><%= t('.posts_html') %></b> <%= @user.microposts.count %></span>
     </section>

@@ -1,5 +1,5 @@
 <% if signed_in? %>
-  <div class="row">
+  <div class="row animated fadeIn">
     <aside class="span4">
       <section>
         <%= render 'shared/user_info' %>
@@ -21,38 +21,38 @@
     </div>
   </div>
 <% else %>
-    <div class="row">
-      <div class="center">
-        <br>
+  <div class="row">
+    <div class="center animated fadeInDown">
+      <br>
 
-        <h1><%= t('.welcome_html') %></h1>
+      <h1><%= t('.welcome_html') %></h1>
 
-        <h2 style="padding-left: 80px; padding-right: 80px">
-          <%= t('.promo_html') %>
-        </h2>
+      <h2 style="padding-left: 80px; padding-right: 80px">
+        <%= t('.promo_html') %>
+      </h2>
 
-        <%= link_to t('.signup_html'), signup_path, class: 'btn btn-large btn-primary' %>
-      </div>
+      <%= link_to t('.signup_html'), signup_path, class: 'btn btn-large btn-primary' %>
+    </div>
+  </div>
+
+  <div id="myCarousel" class="carousel slide animated fadeIn">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="active item"><%= image_tag('Slide-1.jpg', alt: 'Slide 1') %></div>
+      <div class="item"><%= image_tag('Slide-2.jpg', alt: 'Slide 2') %></div>
+      <div class="item"><%= image_tag('Slide-3.jpg', alt: 'Slide 3') %></div>
     </div>
 
-    <div id="myCarousel" class="carousel slide">
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-
-      <div class="carousel-inner">
-        <div class="active item"><%= image_tag('Slide-1.jpg', alt: 'Slide 1') %></div>
-        <div class="item"><%= image_tag('Slide-2.jpg', alt: 'Slide 2') %></div>
-        <div class="item"><%= image_tag('Slide-3.jpg', alt: 'Slide 3') %></div>
-      </div>
-
-      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div>
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+  </div>
 <% end %>
 
 <script>
-    $('.carousel').carousel()
+  $('.carousel').carousel()
 </script>

@@ -1,6 +1,9 @@
 ENV['RAILS_ENV'] = 'test'
 require 'cucumber/rails'
 require 'cucumber/rspec/doubles'
+require 'simplecov'
+
+SimpleCov.start
 
 ActionController::Base.allow_rescue = false
 
@@ -17,10 +20,10 @@ Cucumber::Rails::Database.javascript_strategy = :truncation
 World FactoryGirl::Syntax::Methods
 World SessionsHelper
 
-Capybara.register_driver :chrome do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+Capybara.register_driver :firefox do |app|
+  Capybara::Selenium::Driver.new(app, browser: :firefox)
 end
 
-Capybara.javascript_driver = :chrome
+Capybara.javascript_driver = :firefox
 
 Capybara.default_wait_time = 15
