@@ -40,6 +40,9 @@ group :development, :test do
   gem 'factory_girl_rails', '4.5.0'
   gem 'cucumber-rails', '1.4.2', require: false
   gem 'database_cleaner', '1.4.1'
+
+  # Mailer preview
+  gem 'letter_opener'
 end
 
 group :doc do
