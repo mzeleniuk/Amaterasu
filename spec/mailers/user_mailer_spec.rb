@@ -7,7 +7,7 @@ describe UserMailer, type: :mailer do
     let(:mail) { UserMailer.account_activation(first_user) }
 
     it 'renders the headers' do
-      expect(mail.subject).to eq('Account activation')
+      expect(mail.subject).to eq('Amaterasu - Account activation')
       expect(mail.to).to eq([first_user.email])
       expect(mail.from).to eq(['noreply@amaterasu.com'])
     end
@@ -24,7 +24,7 @@ describe UserMailer, type: :mailer do
     let(:mail) { UserMailer.password_reset(last_user) }
 
     it 'renders the headers' do
-      expect(mail.subject).to eq('Password reset')
+      expect(mail.subject).to eq('Amaterasu - Password reset')
       expect(mail.to).to eq([last_user.email])
       expect(mail.from).to eq(['noreply@amaterasu.com'])
     end
