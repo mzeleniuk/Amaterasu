@@ -35,4 +35,23 @@ describe UserMailer, type: :mailer do
       expect(mail.body.encoded).to match('If you did not request your password to be reset, please ignore this email and your password will stay as it is.')
     end
   end
+
+  describe '.welcome_email' do
+    let(:last_user) { User.create(first_name: 'Welcome', last_name: 'Test', email: 'welcome@gmail.com',
+                                  password: 'secret', password_confirmation: 'secret', reset_token: 'Token') }
+    let(:mail) { UserMailer.welcome_email(last_user) }
+
+    it 'renders the headers' do
+      expect(mail.subject).to eq('Welcome to Amaterasu!')
+      expect(mail.to).to eq([last_user.email])
+      expect(mail.from).to eq(['noreply@amaterasu.com'])
+    end
+
+    it 'renders the body' do
+      expect(mail.body.encoded).to match('Welcome to Amaterasu!')
+      expect(mail.body.encoded).to match('Thanks for joining Amaterasu!')
+      expect(mail.body.encoded).to match('Now you can share your thoughts, follow other users, edit your account and do many other exciting things!')
+      expect(mail.body.encoded).to match('Before start you\'ll want to fill your profile to tell others a bit more about yourself. You always can do it on the "Settings" page.')
+    end
+  end
 end
