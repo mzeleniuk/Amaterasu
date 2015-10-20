@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require pace/pace.min.js
+//= require toastr/toastr.min.js
 //= require turbolinks
 //= require bootstrap-datepicker
 //= require bootstrap-datepicker/core
