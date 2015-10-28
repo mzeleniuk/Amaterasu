@@ -10,10 +10,10 @@
       <%= hidden_field_tag :email, @user.email %>
 
       <%= f.label :password, t('.new_html') %>
-      <%= f.password_field :password, class: 'form-control', placeholder: '••••••' %>
+      <%= f.password_field :password, class: 'form-control', placeholder: '••••••', maxlength: 35 %>
 
       <%= f.label :password_confirmation, t('.confirm_html') %>
-      <%= f.password_field :password_confirmation, class: 'form-control', placeholder: '••••••' %>
+      <%= f.password_field :password_confirmation, class: 'form-control', placeholder: '••••••', maxlength: 35 %>
 
       <%= f.submit t('.update_html'), data: {disable_with: t('.updating_html')},
                    class: 'btn btn-large btn-block btn-primary' %>

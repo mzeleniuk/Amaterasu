@@ -6,7 +6,7 @@
   <div class="span6 offset3 animated fadeInRight">
     <%= form_for(:password_reset, url: password_resets_path) do |f| %>
       <%= f.label :email, t('.email_html') %>
-      <%= f.email_field :email, class: 'form-control', placeholder: 'user@example.com' %>
+      <%= f.email_field :email, class: 'form-control', placeholder: 'user@example.com', maxlength: 50 %>
 
       <%= f.submit t('.submit_html'), data: {disable_with: t('.submitting_html')},
                    class: 'btn btn-large btn-block btn-primary' %>

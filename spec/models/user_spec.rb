@@ -94,8 +94,17 @@ RSpec.describe User, type: :model do
       addresses = %w[user@foo,com user_at_foo.org example.user@foo.foo@bar_baz.com foo@bar+baz.com]
       addresses.each do |invalid_address|
         @user.email = invalid_address
+
         expect(@user).not_to be_valid
       end
+    end
+  end
+
+  describe 'when email is too long' do
+    it 'should be invalid' do
+      @user.email = 'a' * 50 + '@mail.com'
+
+      expect(@user).not_to be_valid
     end
   end
 
@@ -104,6 +113,7 @@ RSpec.describe User, type: :model do
       addresses = %w[user@foo.COM A_US-ER@f.b.org frst.lst@foo.jp a+b@baz.cn]
       addresses.each do |valid_address|
         @user.email = valid_address
+
         expect(@user).to be_valid
       end
     end
@@ -162,6 +172,64 @@ RSpec.describe User, type: :model do
       @user.save
 
       expect(@user.reload.email).to eq mixed_case_email.downcase
+    end
+  end
+
+  describe 'Phone number' do
+    it 'is invalid when phone_number is not a number' do
+      user = build :user, phone_number: 'invalid'
+
+      expect(user.valid?).to eq(false)
+      expect(user.errors[:phone_number]).to eq(['is not a number'])
+    end
+
+    it 'is invalid when phone_number is too long' do
+      user = build :user, phone_number: '1' * 25
+
+      expect(user.valid?).to eq(false)
+      expect(user.errors[:phone_number]).to eq(['is too long (maximum is 20 characters)'])
+    end
+  end
+
+  describe 'Country' do
+    it 'is invalid when country is too long' do
+      user = build :user, country: 'Test' * 10
+
+      expect(user.valid?).to eq(false)
+      expect(user.errors[:country]).to eq(['is too long (maximum is 35 characters)'])
+    end
+  end
+
+  describe 'City' do
+    it 'is invalid when city is too long' do
+      user = build :user, city: 'Test' * 10
+
+      expect(user.valid?).to eq(false)
+      expect(user.errors[:city]).to eq(['is too long (maximum is 35 characters)'])
+    end
+  end
+
+  describe 'Address' do
+    it 'is invalid when address is too long' do
+      user = build :user, address: 'Test' * 52
+
+      expect(user.valid?).to eq(false)
+      expect(user.errors[:address]).to eq(['is too long (maximum is 140 characters)'])
+    end
+  end
+
+  describe 'Bio' do
+    it 'is invalid when bio is too long' do
+      user = build :user, bio: 'Test' * 150
+
+      expect(user.valid?).to eq(false)
+      expect(user.errors[:bio]).to eq(['is too long (maximum is 500 characters)'])
+    end
+  end
+
+  describe '.full_name' do
+    it "return user's full name" do
+      expect(@user.full_name).to eq("#{@user.first_name} #{@user.last_name}")
     end
   end
 

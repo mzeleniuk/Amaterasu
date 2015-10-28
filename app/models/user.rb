@@ -19,10 +19,15 @@ class User < ActiveRecord::Base
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
-  validates :email, presence: true, length: {maximum: 255},
+  validates :email, presence: true, length: {maximum: 50},
             format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :password, length: {minimum: 6}, allow_blank: true
+  validates :phone_number, numericality: {only_integer: true}, length: {maximum: 20}, allow_blank: true
   validates :gender, inclusion: %w(Male Female), allow_blank: true
+  validates :country, length: {maximum: 35}, allow_blank: true
+  validates :city, length: {maximum: 35}, allow_blank: true
+  validates :address, length: {maximum: 140}, allow_blank: true
+  validates :bio, length: {maximum: 500}, allow_blank: true
   validate :avatar_size
 
   has_secure_password
@@ -40,8 +45,7 @@ class User < ActiveRecord::Base
   end
 
   def User.digest(string)
-    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
-        BCrypt::Engine.cost
+    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
   end
 

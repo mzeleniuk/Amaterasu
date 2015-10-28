@@ -6,7 +6,7 @@
         <ul class="nav pull-right">
           <% if signed_in? %>
             <li id="user_name_header">
-              <%= image_tag(current_user.avatar.url, :class => 'avatar_header') %>
+              <%= image_tag(current_user.avatar.url, class: 'avatar_header') %>
               <%= current_user.full_name %>
             </li>
           <% end %>
@@ -21,7 +21,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <%= t('.account_html') %> <b class="caret"></b>
               </a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu animated bounceIn">
                 <li>
                   <%= link_to(current_user) do %>
                     <i class='icon-user'></i>

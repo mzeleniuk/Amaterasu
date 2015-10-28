@@ -8,19 +8,19 @@
       <%= render 'shared/error_messages', object: f.object %>
 
       <%= f.label :first_name, t('.first_name_html') %>
-      <%= f.text_field :first_name, placeholder: 'Snake' %>
+      <%= f.text_field :first_name, placeholder: 'Example', maxlength: 25 %>
 
       <%= f.label :last_name, t('.last_name_html') %>
-      <%= f.text_field :last_name, placeholder: 'Solid' %>
+      <%= f.text_field :last_name, placeholder: 'User', maxlength: 25 %>
 
       <%= f.label :email, t('.email_html') %>
-      <%= f.email_field :email, placeholder: 'user@example.com' %>
+      <%= f.email_field :email, placeholder: 'user@example.com', maxlength: 50 %>
 
       <%= f.label :password, t('.password_html') %>
-      <%= f.password_field :password, placeholder: '••••••' %>
+      <%= f.password_field :password, placeholder: '••••••', maxlength: 35 %>
 
       <%= f.label :password_confirmation, t('.confirmation_html') %>
-      <%= f.password_field :password_confirmation, placeholder: '••••••' %>
+      <%= f.password_field :password_confirmation, placeholder: '••••••', maxlength: 35 %>
 
       <%= f.submit t('.submit_html'), data: {disable_with: t('.signing_up_html')},
                    class: 'btn btn-large btn-block btn-primary' %>

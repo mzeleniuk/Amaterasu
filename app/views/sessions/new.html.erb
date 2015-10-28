@@ -6,10 +6,10 @@
   <div class="span6 offset3 animated fadeInRight">
     <%= form_for(:session, url: sessions_path) do |f| %>
       <%= f.label :email, t('.email_html') %>
-      <%= f.email_field :email, placeholder: 'user@example.com' %>
+      <%= f.email_field :email, placeholder: 'user@example.com', maxlength: 50 %>
 
       <%= f.label :password, t('.password_html') %>
-      <%= f.password_field :password, placeholder: '••••••' %>
+      <%= f.password_field :password, placeholder: '••••••', maxlength: 35 %>
 
       <%= f.label :remember_me, class: 'checkbox' do %>
         <%= f.check_box :remember_me %>
