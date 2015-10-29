@@ -39,7 +39,10 @@
 
   <div class="container">
     <% flash.each do |key, value| %>
-      <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+      <div class="alert <%= "alert-#{key} fade in" %> animated pulse">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <%= value %>
+      </div>
     <% end %>
 
     <%= yield %>
