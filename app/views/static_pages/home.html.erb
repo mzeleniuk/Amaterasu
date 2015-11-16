@@ -22,16 +22,18 @@
   </div>
 <% else %>
   <div class="row">
-    <div class="center animated fadeInDown">
+    <div class="center">
       <br>
 
-      <h1><%= t('.welcome_html') %></h1>
+      <h1 class="animated fadeInDown"><%= t('.welcome_html') %></h1>
 
-      <h2 style="padding-left: 80px; padding-right: 80px">
-        <%= t('.promo_html') %>
-      </h2>
+      <div class="animated fadeIn">
+        <h2 style="padding-left: 80px; padding-right: 80px">
+          <%= t('.promo_html') %>
+        </h2>
 
-      <%= link_to t('.signup_html'), signup_path, class: 'btn btn-large btn-primary' %>
+        <%= link_to t('.signup_html'), signup_path, class: 'btn btn-large btn-primary' %>
+      </div>
     </div>
   </div>
 
