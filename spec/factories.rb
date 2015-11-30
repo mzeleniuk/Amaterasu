@@ -1,4 +1,10 @@
 FactoryGirl.define do
+  factory :comment do
+    commenter 'First User'
+    body 'My comment.'
+    micropost_id 1
+  end
+
   factory :user do
     first_name 'Test'
     sequence(:last_name) { |n| "Person #{n}" }
@@ -15,6 +21,6 @@ FactoryGirl.define do
 
   factory :micropost do
     content 'Test content'
-    user
+    user_id 1
   end
 end
