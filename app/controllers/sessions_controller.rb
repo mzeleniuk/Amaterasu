@@ -22,6 +22,7 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out if signed_in?
+    flash[:info] = t(:logout)
     redirect_to root_url
   end
 end

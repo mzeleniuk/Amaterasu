@@ -1,22 +1,23 @@
 en:
 
-  email_check: Please check your email to activate your account.
-  update_profile: Profile updated!
-  delete_user: User deleted!
-  following: Following
-  followers: Followers
-  account_not_activated: Account not activated. Check your email for the activation link.
-  invalid_email_password: Invalid email/password combination!
-  password_reset_check: Check your Email for password reset instructions.
-  email_not_found: Email address not found.
-  password_blank: Password can't be blank!
-  password_reset: Password has been reset!
-  password_reset_expired: Password reset has expired.
-  post_created: Post created!
-  account_activated: Account activated!
-  invalid_activation_link: Invalid activation link.
-  login: Please log in.
-  incorrect: is incorrect
+  email_check: 'Please check your email to activate your account.'
+  update_profile: 'Profile updated!'
+  delete_user: 'User deleted!'
+  following: 'Following'
+  followers: 'Followers'
+  account_not_activated: 'Account not activated. Check your email for the activation link.'
+  invalid_email_password: 'Invalid email/password combination!'
+  password_reset_check: 'Check your Email for password reset instructions.'
+  email_not_found: 'Email address not found.'
+  password_blank: "Password can't be blank!"
+  password_reset: 'Password has been reset!'
+  password_reset_expired: 'Password reset has expired.'
+  post_created: 'Post created!'
+  account_activated: 'Account activated!'
+  invalid_activation_link: 'Invalid activation link.'
+  login: 'Please log in.'
+  incorrect: 'is incorrect'
+  logout: "You've been successfully logged out. We're hope to see you again!"
 
   static_pages:
     home:
