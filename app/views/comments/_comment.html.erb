@@ -1,4 +1,4 @@
-<div class="comments">
+<% if micropost.comments.any? %>
   <% micropost.comments.each do |comment| %>
     <div class="media">
       <a class="pull-left">
@@ -16,9 +16,12 @@
         <span class="comment-body">
           <%= wrap(comment.body) %>
         </span>
+
+        <% if current_user?(comment.user) %>
+          <%= link_to t('microposts.micropost.delete_html'), [comment.micropost, comment], remote: true,
+                      method: :delete, data: {confirm: t('microposts.micropost.confirm_html')} %>
+        <% end %>
       </div>
     </div>
   <% end %>
-
-  <%= render partial: 'comments/form', locals: {micropost: micropost} %>
-</div>
+<% end %>

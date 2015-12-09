@@ -12,7 +12,7 @@ Amaterasu::Application.routes.draw do
     resources :relationships, only: [:create, :destroy]
 
     resources :microposts, only: [:create, :destroy] do
-      resources :comments, only: [:create]
+      resources :comments, only: [:create, :destroy]
     end
 
     root to: 'static_pages#home', via: :all

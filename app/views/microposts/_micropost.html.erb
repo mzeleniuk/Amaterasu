@@ -12,12 +12,16 @@
 
   <span class="timestamp">
     <%= t('.posted_html') %> <%= time_ago_in_words(micropost.created_at) %> <%= t('.ago_html') %>
+
     <% if current_user?(micropost.user) %>
       <%= link_to t('.delete_html'), micropost, method: :delete,
-                  data: {confirm: t('.confirm_html')},
-                  title: micropost.content %>
+                  data: {confirm: t('.confirm_html')}, title: micropost.content %>
     <% end %>
   </span>
 
-  <%= render partial: 'comments/comment', locals: {micropost: micropost} %>
+  <div class="comments">
+    <%= render partial: 'comments/comment', locals: {micropost: micropost} %>
+
+    <%= render partial: 'comments/form', locals: {micropost: micropost} %>
+  </div>
 </li>
