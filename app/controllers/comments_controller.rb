@@ -4,7 +4,11 @@ class CommentsController < ApplicationController
   def create
     @micropost = Micropost.find(params[:micropost_id])
     @comment = @micropost.comments.create(comment_params)
-    redirect_to user_path(id: @micropost.user_id)
+
+    respond_to do |format|
+      format.html { redirect_to user_path(id: @micropost.user_id) }
+      format.js
+    end
   end
 
   private
