@@ -1,5 +1,5 @@
 <li id="micropost-<%= micropost.id %>">
-  <%= image_tag(micropost.user.avatar.url, :class => 'avatar') %>
+  <%= image_tag(micropost.user.avatar.url, class: 'avatar') %>
 
   <span class="user">
     <%= link_to micropost.user.full_name, micropost.user %>
@@ -7,7 +7,7 @@
 
   <span class="content">
     <%= wrap(micropost.content) %>
-    <%= image_tag micropost.picture.url if micropost.picture? %>
+    <%= image_tag micropost.picture.url if micropost.picture.present? %>
   </span>
 
   <span class="timestamp">
@@ -18,4 +18,6 @@
                   title: micropost.content %>
     <% end %>
   </span>
+
+  <%= render partial: 'comments/comment', locals: {micropost: micropost} %>
 </li>

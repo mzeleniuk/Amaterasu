@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :comment do
-    commenter 'First User'
+    user_id 1
     body 'My comment.'
     micropost_id 1
   end

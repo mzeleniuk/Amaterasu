@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20151130180617) do
   enable_extension "plpgsql"
 
   create_table "comments", force: true do |t|
-    t.string   "commenter",    null: false
+    t.integer  "user_id"
     t.text     "body",         null: false
     t.integer  "micropost_id"
     t.datetime "created_at"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20151130180617) do
   end
 
   add_index "comments", ["micropost_id"], name: "index_comments_on_micropost_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "microposts", force: true do |t|
     t.text     "content"

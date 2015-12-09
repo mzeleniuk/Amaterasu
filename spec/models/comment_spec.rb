@@ -1,16 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  context 'Commenter' do
-    it 'is not valid when commenter is blank' do
-      comment = build :comment, commenter: ''
+  context 'User ID' do
+    it 'is not valid when user_id is blank' do
+      comment = build :comment, user_id: ''
 
       expect(comment.valid?).to eq(false)
-      expect(comment.errors[:commenter]).to eq(["can't be blank"])
+      expect(comment.errors[:user_id]).to eq(["can't be blank"])
     end
 
-    it 'is valid when commenter is present' do
-      comment = build :comment, commenter: 'Some User'
+    it 'is valid when user_id is present' do
+      comment = build :comment, user_id: 1
 
       expect(comment.valid?).to eq(true)
     end

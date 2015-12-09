@@ -178,6 +178,10 @@ ua:
     gender_options:
       male: "Чоловік"
       female: "Жінка"
+  comments:
+    your_comment: 'Ваш коментар...'
+    add_comment: 'Додати коментар'
+    adding_comment: 'Додавання коментаря...'
 
   datetime:
     distance_in_words:

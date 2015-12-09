@@ -1,0 +1,24 @@
+<div class="comments">
+  <% micropost.comments.each do |comment| %>
+    <div class="media">
+      <a class="pull-left">
+        <%= image_tag(comment.user.avatar.url, class: 'avatar-small media-object') %>
+      </a>
+
+      <div class="comment-media-body media-body">
+        <span class="user">
+          <%= link_to comment.user.full_name, comment.user %>
+          <small>
+            <%= time_ago_in_words(comment.created_at) %> <%= t('microposts.micropost.ago_html') %>
+          </small>
+        </span>
+
+        <span class="comment-body">
+          <%= wrap(comment.body) %>
+        </span>
+      </div>
+    </div>
+  <% end %>
+
+  <%= render partial: 'comments/form', locals: {micropost: micropost} %>
+</div>
