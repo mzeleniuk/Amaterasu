@@ -1,7 +1,5 @@
 @import "bootstrap";
 
-/* universal */
-
 body {
   padding-top: 60px;
 }
@@ -40,7 +38,7 @@ textarea {
   margin-top: 30px;
 }
 
-/* typography */
+// Typography
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -65,7 +63,7 @@ p {
   line-height: 1.7em;
 }
 
-/* header */
+// Header
 
 #logo_image {
   float: left;
@@ -97,7 +95,7 @@ p {
   margin-top: 3px;
 }
 
-/* footer */
+// Footer
 
 footer {
   margin-top: 45px;
@@ -123,7 +121,7 @@ footer {
   }
 }
 
-/* mixins, variables, etc. */
+// Mixins, variables, etc.
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -131,7 +129,7 @@ footer {
   box-sizing: border-box;
 }
 
-/* miscellaneous */
+// Miscellaneous
 
 .debug_dump {
   clear: both;
@@ -141,7 +139,7 @@ footer {
   @include box_sizing;
 }
 
-/* sidebar */
+// Sidebar
 
 aside {
   section {
@@ -165,7 +163,7 @@ aside {
   }
 }
 
-/* forms */
+// Forms
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
@@ -199,7 +197,7 @@ input {
   }
 }
 
-/* microposts */
+// Microposts
 
 .microposts {
   list-style: none;
@@ -242,7 +240,7 @@ aside {
   }
 }
 
-/* Prevent scrolling when a modal is opened */
+// Prevent scrolling when a modal is opened
 
 body.modal-open {
   overflow: hidden;
@@ -254,4 +252,16 @@ body.modal-open {
 
 .navbar .nav .dropdown-toggle .caret {
   margin-top: 9px;
+}
+
+// Back to Top link
+
+.back-top {
+  width: 32px;
+  height: 32px;
+  position: fixed;
+  bottom: 50px;
+  right: 25px;
+  display: none;
+  cursor: pointer;
 }
