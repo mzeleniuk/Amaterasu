@@ -1,6 +1,8 @@
 .comments {
-  margin: 10px 0 0 70px;
-  border-top: 1px solid #eaeaea;
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-top: 1px solid #e7eaec;
+  background: #f9f9f9 none repeat scroll 0 0;
 }
 
 .comment-media-body {
@@ -26,4 +28,14 @@
   box-shadow: 0 0 7px rgba(0, 0, 0, .7);
   -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, .7);
   -moz-box-shadow: 0 0 7px rgba(0, 0, 0, .7);
+}
+
+#new_comment {
+  margin-bottom: 0;
+}
+
+.comment-input {
+  border-radius: 1px;
+  border: 1px solid #e5e6e7;
+  box-shadow: none;
 }

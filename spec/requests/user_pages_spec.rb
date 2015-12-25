@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe 'User pages' do
-
   subject { page }
 
   describe 'index' do
@@ -20,10 +19,10 @@ describe 'User pages' do
     it { expect(page).to have_content('All users') }
 
     describe 'pagination' do
-      before(:all) { 30.times { FactoryGirl.create(:user) } }
+      before(:all) { 20.times { FactoryGirl.create(:user) } }
       after(:all) { User.delete_all }
 
-      it { should have_selector('div.pagination') }
+      it { expect(page).to have_selector('div.pagination') }
 
       it 'lists each user' do
         User.paginate(page: 1).each do |user|
@@ -61,10 +60,9 @@ describe 'User pages' do
   end
 
   describe 'Sign up page' do
+    let(:submit) { 'Create my account' }
 
     before { visit '/en/signup' }
-
-    let(:submit) { 'Create my account' }
 
     describe 'with invalid information' do
       it 'does not create a user' do
@@ -151,7 +149,7 @@ describe 'User pages' do
           end.to change(user.following, :count).by(-1)
         end
 
-        it 'decrements the other user\'s followers count' do
+        it "decrements the other user's followers count" do
           expect do
             click_button 'Unfollow'
           end.to change(other_user.followers, :count).by(-1)
@@ -179,14 +177,14 @@ describe 'User pages' do
     end
 
     describe 'page' do
-      it { should have_content('Update your profile') }
-      it { should have_title('Edit user') }
+      it { expect(page).to have_content('Update your profile') }
+      it { expect(page).to have_title('Edit user') }
     end
 
     describe 'with invalid information' do
       before { click_button 'Update profile' }
 
-      it { should have_content('error') }
+      it { expect(page).to have_content('error') }
     end
 
     describe 'forbidden attributes' do
@@ -230,9 +228,9 @@ describe 'User pages' do
       click_button 'Update profile'
     end
 
-    it { should have_title(new_name) }
-    it { should have_selector('div.alert.alert-success') }
-    it { should have_link('Account') }
+    it { expect(page).to have_title(new_name) }
+    it { expect(page).to have_selector('div.alert.alert-success') }
+    it { expect(page).to have_link('Account') }
 
     specify { expect(user.reload.first_name).to eq new_first_name }
     specify { expect(user.reload.last_name).to eq new_last_name }
@@ -253,13 +251,13 @@ describe 'User pages' do
       visit user_path(user)
     end
 
-    it { should have_content(user.full_name) }
-    it { should have_title(user.full_name) }
+    it { expect(page).to have_content(user.full_name) }
+    it { expect(page).to have_title(user.full_name) }
 
     describe 'microposts' do
-      it { should have_content(m1.content) }
-      it { should have_content(m2.content) }
-      it { should have_content(user.microposts.count) }
+      it { expect(page).to have_content(m1.content) }
+      it { expect(page).to have_content(m2.content) }
+      it { expect(page).to have_content(user.microposts.count) }
     end
   end
 
@@ -279,9 +277,9 @@ describe 'User pages' do
         visit following_user_path(user)
       end
 
-      it { should have_title('Following') }
-      it { should have_selector('h3', text: 'Following') }
-      it { should have_link(other_user.full_name) }
+      it { expect(page).to have_title('Following') }
+      it { expect(page).to have_selector('h3', text: 'Following') }
+      it { expect(page).to have_link(other_user.full_name) }
     end
 
     describe 'followers' do
@@ -294,9 +292,9 @@ describe 'User pages' do
         visit followers_user_path(other_user)
       end
 
-      it { should have_title('Followers') }
-      it { should have_selector('h3', text: 'Followers') }
-      it { should have_link(user.full_name) }
+      it { expect(page).to have_title('Followers') }
+      it { expect(page).to have_selector('h3', text: 'Followers') }
+      it { expect(page).to have_link(user.full_name) }
     end
   end
 end

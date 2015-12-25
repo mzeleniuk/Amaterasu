@@ -1,15 +1,14 @@
 # encoding: utf-8
 
 class AvatarUploader < CarrierWave::Uploader::Base
-
   include Cloudinary::CarrierWave
-
   include CarrierWave::MiniMagick
+
   process resize_to_limit: [60, 60]
 
   CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
 
-  if Rails.env.development?
+  if Rails.env.development? or Rails.env.test?
     storage :file
   end
 
@@ -26,8 +25,8 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   version :standard do
-    process :convert => 'png'
-    cloudinary_transformation :quality => 80
+    process convert: 'png'
+    cloudinary_transformation quality: 80
   end
 
   version :thumbnail do

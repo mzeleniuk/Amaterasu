@@ -203,8 +203,8 @@ input {
   list-style: none;
   margin: 9px 0 0 0;
   li {
-    padding: 15px 0;
-    border-top: 1px solid #e8e8e8;
+    margin: 15px 0;
+    border: 1px solid #e7eaec;
   }
   .user {
     margin-top: 5em;
@@ -222,6 +222,9 @@ input {
     color: $grayLight;
     display: block;
     margin-left: 70px;
+  }
+  .micropost-body {
+    padding: 15px;
   }
 }
 

@@ -1,6 +1,6 @@
 <div class="comment-field">
   <%= form_for([micropost, micropost.comments.build], remote: true) do |f| %>
-    <%= f.text_area :body, placeholder: t('comments.your_comment'), maxlength: 500 %>
+    <%= f.text_area :body, placeholder: t('comments.your_comment'), class: 'comment-input', maxlength: 500 %>
 
     <%= f.submit t('comments.add_comment'), data: {disable_with: t('comments.adding_comment')}, class: 'btn btn-primary' %>
   <% end %>
