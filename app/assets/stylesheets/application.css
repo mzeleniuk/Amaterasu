@@ -12,5 +12,6 @@
  *= require bootstrap-datepicker
  *= require animate/animate.min
  *= require toastr/toastr.min
+ *= require sweet-alert/sweetalert
  *= require_tree .
  */

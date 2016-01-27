@@ -17,6 +17,7 @@
 //= require pace/pace.min.js
 //= require toastr/toastr.min.js
 //= require idle-timer/idle-timer.min.js
+//= require sweet-alert/sweetalert.min
 //= require turbolinks
 //= require bootstrap-datepicker
 //= require bootstrap-datepicker/core
