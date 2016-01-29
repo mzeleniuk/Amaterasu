@@ -8,19 +8,24 @@
       <div class="comment-media-body media-body">
         <span class="user">
           <%= link_to comment.user.full_name, comment.user %>
-          <small>
-            <%= time_ago_in_words(comment.created_at) %> <%= t('microposts.micropost.ago_html') %>
-          </small>
         </span>
 
         <span class="comment-body">
           <%= wrap(comment.body) %>
         </span>
 
-        <% if current_user?(comment.user) %>
-          <%= link_to t('microposts.micropost.delete_html'), [comment.micropost, comment], remote: true,
-                      method: :delete, data: {confirm: t('microposts.micropost.confirm_html')} %>
-        <% end %>
+        <span class="timestamp" style="margin-left: 0;">
+          <small>
+            <%= t('microposts.micropost.posted_html') %> <%= time_ago_in_words(comment.created_at) %> <%= t('microposts.micropost.ago_html') %>
+          </small>
+
+          <% if current_user?(comment.user) %>
+            <small>
+              <%= link_to t('microposts.micropost.delete_html'), [comment.micropost, comment], remote: true,
+                          method: :delete, data: {confirm: t('microposts.micropost.confirm_html')} %>
+            </small>
+          <% end %>
+        </span>
       </div>
     </div>
   <% end %>

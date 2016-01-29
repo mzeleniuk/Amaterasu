@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
         format.js
       end
     else
-      render :js => "alert('Your comment is blank!');"
+      render js: "swal({title: 'Your comment is blank!', type: 'error'});"
     end
   end
 

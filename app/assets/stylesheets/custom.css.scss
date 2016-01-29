@@ -176,6 +176,10 @@ input {
   height: auto !important;
 }
 
+.sweet-alert input {
+  display: none;
+}
+
 #error_explanation {
   color: #f00;
   ul {
