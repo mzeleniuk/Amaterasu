@@ -21,6 +21,10 @@ When /^User submits valid log in information$/ do
   click_button 'Log in'
 end
 
+And /^He fill in the '(.+)' field with '(.+)'$/ do |field, content|
+  fill_in field, with: content
+end
+
 Then /^He should see his profile page$/ do
   expect(page).to have_title(@user.full_name)
 end

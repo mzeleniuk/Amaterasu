@@ -16,7 +16,7 @@
 
       <% if current_user?(micropost.user) %>
         <%= link_to t('.delete_html'), micropost, method: :delete,
-                    data: {confirm: t('.confirm_html')}, title: micropost.content %>
+                    data: {confirm: t('.confirm_html')} %>
       <% end %>
     </span>
   </div>
