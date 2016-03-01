@@ -18,6 +18,7 @@
 //= require toastr/toastr.min.js
 //= require idle-timer/idle-timer.min.js
 //= require sweet-alert/sweetalert.min
+//= require Chart/Chart.min.js
 //= require turbolinks
 //= require bootstrap-datepicker
 //= require bootstrap-datepicker/core

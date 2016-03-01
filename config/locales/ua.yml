@@ -116,6 +116,7 @@ ua:
     personal_info:
       personal_info_html: "Особиста інформація"
       no_info_html: "Особиста інформація відсутня"
+      profile_strength: 'Заповненість профілю'
     stats:
       following_html: "Ви читаєте"
       users_html: "користувачів"
@@ -329,3 +330,7 @@ ua:
         current_password: "Поточний пароль"
       micropost:
         content: "Текст публікації"
+
+  will_paginate:
+    next_label: 'Далі'
+    previous_label: 'Назад'

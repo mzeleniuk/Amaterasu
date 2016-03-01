@@ -113,6 +113,7 @@ en:
     personal_info:
       personal_info_html: "Personal information"
       no_info_html: "Personal information is not provided"
+      profile_strength: 'Profile strength'
     stats:
       following_html: "You are following"
       users_html: "users"

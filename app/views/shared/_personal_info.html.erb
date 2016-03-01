@@ -68,3 +68,16 @@
     </div>
   </div>
 </div>
+
+<p class="lead text-center"><%= t('shared.personal_info.profile_strength') %></p>
+<canvas id="profile-strength-pie-chart"
+        data-first_name="<%= @user.first_name.present? %>"
+        data-last_name="<%= @user.last_name.present? %>"
+        data-email="<%= @user.email.present? %>"
+        data-gender="<%= @user.gender.present? %>"
+        data-date_of_birth="<%= @user.date_of_birth.present? %>"
+        data-country="<%= @user.country.present? %>"
+        data-city="<%= @user.city.present? %>"
+        data-phone_number="<%= @user.phone_number.present? %>"
+        data-bio="<%= @user.bio.present? %>">
+</canvas>
