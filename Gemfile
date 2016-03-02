@@ -16,8 +16,6 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails', '~> 3.1'
-gem 'jquery-turbolinks', '~> 2.1'
-gem 'turbolinks'
 gem 'jbuilder'
 gem 'sprockets'
 

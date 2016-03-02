@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap
 //= require pace/pace.min.js
@@ -19,7 +18,6 @@
 //= require idle-timer/idle-timer.min.js
 //= require sweet-alert/sweetalert.min
 //= require Chart/Chart.min.js
-//= require turbolinks
 //= require bootstrap-datepicker
 //= require bootstrap-datepicker/core
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
