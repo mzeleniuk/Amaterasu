@@ -117,6 +117,7 @@ ua:
       personal_info_html: "Особиста інформація"
       no_info_html: "Особиста інформація відсутня"
       profile_strength: 'Заповненість профілю'
+      profile_completed: 'Вітаємо! Ваш профіль повністю заповнено!'
     stats:
       following_html: "Ви читаєте"
       users_html: "користувачів"

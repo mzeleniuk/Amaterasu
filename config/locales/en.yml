@@ -114,6 +114,7 @@ en:
       personal_info_html: "Personal information"
       no_info_html: "Personal information is not provided"
       profile_strength: 'Profile strength'
+      profile_completed: 'Congratulations! Your profile is completed!'
     stats:
       following_html: "You are following"
       users_html: "users"

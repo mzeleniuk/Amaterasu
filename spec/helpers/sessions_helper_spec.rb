@@ -1,9 +1,8 @@
 require 'rails_helper'
-include SessionsHelper
 
-describe ApplicationHelper, type: :helper do
-  describe '.remember' do
-    let(:user) { FactoryGirl.create(:user) }
+describe SessionsHelper, type: :helper do
+  describe '#remember' do
+    let(:user) { create :user }
 
     it 'current_user returns nil when remember digest is wrong' do
       remember(user)
@@ -12,7 +11,7 @@ describe ApplicationHelper, type: :helper do
       expect(current_user).to eq(nil)
     end
 
-    it 'current_user returns right user when session is nil' do
+    it 'current_user returns right user' do
       remember(user)
 
       expect(user).to eq(current_user)
