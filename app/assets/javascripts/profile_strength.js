@@ -59,6 +59,6 @@ $(function () {
     ];
 
     ctx = canvas[0].getContext("2d");
-    return myNewChart = new Chart(ctx).Doughnut(doughnutData, doughnutOptions);
+    return new Chart(ctx).Doughnut(doughnutData, doughnutOptions);
   }
 });

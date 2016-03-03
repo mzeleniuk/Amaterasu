@@ -26,13 +26,12 @@ class PasswordResetsController < ApplicationController
     if password_blank?
       flash.now[:danger] = t(:password_blank)
       render 'edit'
-    else if @user.update_attributes(user_params)
+    elsif @user.update_attributes(user_params)
       sign_in @user
       flash[:success] = t(:password_reset)
       redirect_to @user
-        else
-          render 'edit'
-      end
+    else
+      render 'edit'
     end
   end
 
