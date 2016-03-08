@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  skip_before_filter :signed_in_user
+
   def home
     if signed_in?
       @micropost = current_user.microposts.build

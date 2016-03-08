@@ -14,7 +14,7 @@ FactoryGirl.define do
     activated true
     activated_at Time.zone.now
 
-    factory :admin do
+    trait :admin do
       admin true
     end
   end

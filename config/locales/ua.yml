@@ -60,10 +60,15 @@ ua:
       home_html: "Головна сторінка"
       signin_html: "Увійти"
       account_html: "Обліковий запис"
+      admin: 'Сторінка адміністратора'
       profile_html: "Профіль"
       settings_html: "Налаштування"
       users_html: "Користувачі"
       logout_html: "Вийти"
+
+  admin:
+    index:
+      title: 'Сторінка адміністратора'
 
   microposts:
     micropost:
@@ -294,6 +299,7 @@ ua:
         many: "%{model} не збережено через %{count} помилок"
         one: "%{model} не збережено через %{count} помилку"
         other: "%{model} не збережено через %{count} помилки"
+    access_denied: 'У Вас немає доступу до цієї сторінки.'
 
   helpers:
     select:

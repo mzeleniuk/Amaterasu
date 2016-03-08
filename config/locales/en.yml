@@ -58,10 +58,15 @@ en:
       home_html: "Home"
       signin_html: "Log in"
       account_html: "Account"
+      admin: 'Admin page'
       profile_html: "Profile"
       settings_html: "Settings"
       users_html: "All users"
       logout_html: "Log out"
+
+  admin:
+    index:
+      title: 'Admin page'
 
   microposts:
     micropost:
@@ -265,6 +270,7 @@ en:
       header:
         one: 1 error prohibited this %{model} from being saved
         other: "%{count} errors prohibited this %{model} from being saved"
+    access_denied: 'You have no permission to get there.'
 
   helpers:
     select:

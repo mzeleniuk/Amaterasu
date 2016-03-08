@@ -1,4 +1,6 @@
 class AccountActivationsController < ApplicationController
+  skip_before_filter :signed_in_user
+
   def edit
     user = User.find_by(email: params[:email])
     if user && !user.activated? && user.authenticated?(:activation, params[:id])

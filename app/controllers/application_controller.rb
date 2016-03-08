@@ -1,7 +1,26 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
-  before_action :set_i18n_locale_from_params
   include SessionsHelper
+
+  protect_from_forgery with: :exception
+
+  before_action :set_i18n_locale_from_params
+  before_filter :signed_in_user
+
+  private
+
+  def signed_in_user
+    unless signed_in?
+      store_location
+      redirect_to signin_url, notice: t(:login)
+    end
+  end
+
+  def admin_user
+    unless current_user.admin?
+      flash[:danger] = t('errors.access_denied')
+      redirect_to root_url
+    end
+  end
 
   protected
 
@@ -17,6 +36,6 @@ class ApplicationController < ActionController::Base
   end
 
   def default_url_options
-    { locale: I18n.locale }
+    {locale: I18n.locale}
   end
 end

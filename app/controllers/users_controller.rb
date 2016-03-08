@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :signed_in_user,
-                only: [:index, :show, :edit, :update, :destroy, :following, :followers]
+  skip_before_filter :signed_in_user, only: [:new, :create]
+
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
 
@@ -46,10 +46,6 @@ class UsersController < ApplicationController
     User.find(params[:id]).destroy
     flash[:success] = t(:delete_user)
     redirect_to users_url
-  end
-
-  def admin_user
-    redirect_to(root_url) unless current_user.admin?
   end
 
   def following

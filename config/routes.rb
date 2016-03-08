@@ -1,5 +1,7 @@
 Amaterasu::Application.routes.draw do
   scope '(:locale)' do
+    get 'admin/index'
+
     resources :users do
       member do
         get :following, :followers
@@ -15,8 +17,6 @@ Amaterasu::Application.routes.draw do
       resources :comments, only: [:create, :destroy]
     end
 
-    root to: 'static_pages#home', via: :all
-
     match '/signup', to: 'users#new', via: 'get'
     match '/signin', to: 'sessions#new', via: 'get'
     post 'signin' => 'sessions#create'
@@ -27,5 +27,7 @@ Amaterasu::Application.routes.draw do
 
     get 'password_resets/new'
     get 'password_resets/edit'
+
+    root to: 'static_pages#home', via: :all
   end
 end

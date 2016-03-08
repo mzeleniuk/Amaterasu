@@ -23,3 +23,7 @@
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.fr.js
 //= require_tree .
+
+$(document).ready(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});

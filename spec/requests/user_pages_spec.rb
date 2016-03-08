@@ -35,7 +35,7 @@ describe 'User pages' do
       it { expect(page).to_not have_link('Delete') }
 
       describe 'as an admin user' do
-        let(:admin) { FactoryGirl.create(:admin) }
+        let(:admin) { FactoryGirl.create(:user, :admin) }
 
         before do
           visit '/en/signin'

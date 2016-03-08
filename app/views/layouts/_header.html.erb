@@ -22,6 +22,15 @@
                 <%= t('.account_html') %> <b class="caret"></b>
               </a>
               <ul class="dropdown-menu animated bounceIn">
+                <% if current_user.admin? %>
+                  <li>
+                    <%= link_to(admin_index_path) do %>
+                      <i class='icon-lock'></i>
+                      <%= t('.admin') %>
+                    <% end %>
+                  </li>
+                  <li class="divider"></li>
+                <% end %>
                 <li>
                   <%= link_to(current_user) do %>
                     <i class='icon-user'></i>

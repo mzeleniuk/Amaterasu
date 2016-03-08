@@ -1,4 +1,6 @@
 class PasswordResetsController < ApplicationController
+  skip_before_filter :signed_in_user
+
   before_action :get_user, only: [:edit, :update]
   before_action :valid_user, only: [:edit, :update]
   before_action :check_expiration, only: [:edit, :update]
