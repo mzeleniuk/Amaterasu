@@ -58,7 +58,7 @@ describe CommentsController, type: :controller do
       it 'redirects user to login page' do
         post :create, valid_comment_params
 
-        expect(response).to redirect_to('http://test.host/en/signin')
+        expect(response).to redirect_to(signin_path)
       end
     end
   end
@@ -73,7 +73,7 @@ describe CommentsController, type: :controller do
     it 'redirects user when he is not logged in' do
       delete :destroy, micropost_id: micropost.id, id: comment.id
 
-      expect(response).to redirect_to('http://test.host/en/signin')
+      expect(response).to redirect_to(signin_path)
     end
 
     it 'redirects destroy for wrong comment' do
