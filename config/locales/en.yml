@@ -67,6 +67,10 @@ en:
   admin:
     index:
       title: 'Admin page'
+      welcome: 'Welcome to admin panel, %{admin}!'
+      users: 'Users'
+      posts: 'Posts'
+      comments: 'Comments'
 
   microposts:
     micropost:

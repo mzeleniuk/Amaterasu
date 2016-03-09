@@ -1,3 +1,30 @@
 // Place all the styles related to the admin controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.admin-widget-users {
+  border: 1px solid rgb(231, 234, 236);
+  border-top: 3px solid #1C84C6;
+  background: #FAFAFB none repeat scroll 0 0;
+  margin: 20px 0 10px;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.admin-widget-posts {
+  border: 1px solid rgb(231, 234, 236);
+  border-top: 3px solid #23C6C8;
+  background: #FAFAFB none repeat scroll 0 0;
+  margin: 20px 0 10px;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.admin-widget-comments {
+  border: 1px solid rgb(231, 234, 236);
+  border-top: 3px solid #F8AC59;
+  background: #FAFAFB none repeat scroll 0 0;
+  margin: 20px 0 10px;
+  padding: 10px;
+  border-radius: 2px;
+}

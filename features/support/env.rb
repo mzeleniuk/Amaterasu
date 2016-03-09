@@ -1,4 +1,5 @@
 ENV['RAILS_ENV'] = 'test'
+
 require 'cucumber/rails'
 require 'cucumber/rspec/doubles'
 require 'simplecov'
@@ -26,10 +27,10 @@ Cucumber::Rails::Database.javascript_strategy = :truncation
 World FactoryGirl::Syntax::Methods
 World SessionsHelper
 
-Capybara.register_driver :firefox do |app|
-  Capybara::Selenium::Driver.new(app, browser: :firefox)
+Capybara.register_driver :chrome do |app|
+  Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
 
-Capybara.javascript_driver = :firefox
+Capybara.javascript_driver = :chrome
 
 Capybara.default_wait_time = 15

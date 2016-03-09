@@ -69,6 +69,10 @@ ua:
   admin:
     index:
       title: 'Сторінка адміністратора'
+      welcome: 'Ласкаво просимо на сторінку адміністратора, %{admin}!'
+      users: 'Користувачів'
+      posts: 'Публікацій'
+      comments: 'Коментарів'
 
   microposts:
     micropost:
