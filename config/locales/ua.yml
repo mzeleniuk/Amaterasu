@@ -73,6 +73,9 @@ ua:
       users: 'Користувачів'
       posts: 'Публікацій'
       comments: 'Коментарів'
+      last_users: 'Останні 10 користувачів'
+      actions: 'Дії'
+      view_profile: 'Переглянути профіль'
 
   microposts:
     micropost:

@@ -23,4 +23,30 @@
       </div>
     </div>
   </div>
+
+  <table class="table table-bordered">
+    <thead class="table-head">
+      <tr>
+        <th colspan="5"><%= t('admin.index.last_users') %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th><%= t('users.new.first_name_html') %></th>
+        <th><%= t('users.new.last_name_html') %></th>
+        <th><%= t('users.new.email_html') %></th>
+        <th><%= t('users.edit.country_html') %></th>
+        <th><%= t('admin.index.actions') %></th>
+      </tr>
+      <% User.all.order('id desc').limit(10).each do |user| %>
+        <tr>
+          <td><%= user.first_name %></td>
+          <td><%= user.last_name %></td>
+          <td><%= mail_to user.email %></td>
+          <td><%= user.country %></td>
+          <td><%= link_to t('admin.index.view_profile'), user %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>

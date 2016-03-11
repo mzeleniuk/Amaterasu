@@ -71,6 +71,9 @@ en:
       users: 'Users'
       posts: 'Posts'
       comments: 'Comments'
+      last_users: 'Last 10 users'
+      actions: 'Actions'
+      view_profile: 'View profile'
 
   microposts:
     micropost:
