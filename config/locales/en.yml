@@ -72,6 +72,8 @@ en:
       posts: 'Posts'
       comments: 'Comments'
       last_users: 'Last 10 users'
+      activated: 'Activated'
+      not_activated: 'Not activated'
       joined_at: 'Joined at'
       actions: 'Actions'
       view_profile: 'View profile'

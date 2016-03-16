@@ -74,6 +74,8 @@ ua:
       posts: 'Публікацій'
       comments: 'Коментарів'
       last_users: 'Останні 10 користувачів'
+      activated: 'Активовано'
+      not_activated: 'Не активовано'
       joined_at: 'Реєстрація'
       actions: 'Дії'
       view_profile: 'Переглянути профіль'

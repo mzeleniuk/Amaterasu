@@ -43,7 +43,17 @@
         <tr>
           <td><%= user.first_name %></td>
           <td><%= user.last_name %></td>
-          <td><%= mail_to user.email %></td>
+          <td>
+            <%= mail_to user.email %>
+            <% if user.activated %>
+              <span class="label label-success" data-toggle="tooltip" data-placement="right"
+                    data-animation="true" title="<%= l user.activated_at, format: :date %>">
+                <%= t('admin.index.activated') %>
+              </span>
+            <% else %>
+              <span class="label label-warning"><%= t('admin.index.not_activated') %></span>
+            <% end %>
+          </td>
           <td><%= user.country %></td>
           <td><%= l user.created_at, format: :date %></td>
           <td><%= link_to t('admin.index.view_profile'), user %></td>
