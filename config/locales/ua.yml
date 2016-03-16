@@ -74,6 +74,7 @@ ua:
       posts: 'Публікацій'
       comments: 'Коментарів'
       last_users: 'Останні 10 користувачів'
+      joined_at: 'Реєстрація'
       actions: 'Дії'
       view_profile: 'Переглянути профіль'
 
@@ -256,12 +257,20 @@ ua:
         one: "%{count} секунда"
         other: "%{count} секунд"
     prompts:
-      day: День
-      hour: Година
-      minute: Хвилина
-      month: Місяць
-      second: Секунда
-      year: Рік
+      day: 'День'
+      hour: 'Година'
+      minute: 'Хвилина'
+      month: 'Місяць'
+      second: 'Секунда'
+      year: 'Рік'
+
+  time:
+    formats:
+      date: '%d %b, %Y'
+
+  date:
+    month_names: [~, Січень, Лютий, Березень, Квітень, Травень, Червень, Липень, Серпень, Вересень, Жовтень, Листопад, Грудень]
+    abbr_month_names: [~, Січ, Лют, Бер, Кві, Тра, Чер, Лип, Сер, Вер, Жов, Лис, Гру]
 
   errors:
     format: "%{attribute} %{message}"

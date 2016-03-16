@@ -72,6 +72,7 @@ en:
       posts: 'Posts'
       comments: 'Comments'
       last_users: 'Last 10 users'
+      joined_at: 'Joined at'
       actions: 'Actions'
       view_profile: 'View profile'
 
@@ -230,12 +231,16 @@ en:
         one: 1 second
         other: "%{count} seconds"
     prompts:
-      day: Day
-      hour: Hour
-      minute: Minute
-      month: Month
-      second: Seconds
-      year: Year
+      day: 'Day'
+      hour: 'Hour'
+      minute: 'Minute'
+      month: 'Month'
+      second: 'Seconds'
+      year: 'Year'
+
+  time:
+    formats:
+      date: '%b %d, %Y'
 
   errors:
     format: "%{attribute} %{message}"
