@@ -7,19 +7,19 @@
     <div class="span4">
       <div class="admin-widget-users">
         <h3 class="text-center"><%= t('admin.index.users') %></h3>
-        <h1><%= User.count %></h1>
+        <h1><span class="counter"><%= User.count %></span></h1>
       </div>
     </div>
     <div class="span4">
       <div class="admin-widget-posts">
         <h3 class="text-center"><%= t('admin.index.posts') %></h3>
-        <h1><%= Micropost.count %></h1>
+        <h1><span class="counter"><%= Micropost.count %></span></h1>
       </div>
     </div>
     <div class="span4">
       <div class="admin-widget-comments">
         <h3 class="text-center"><%= t('admin.index.comments') %></h3>
-        <h1><%= Comment.count %></h1>
+        <h1><span class="counter"><%= Comment.count %></span></h1>
       </div>
     </div>
   </div>
