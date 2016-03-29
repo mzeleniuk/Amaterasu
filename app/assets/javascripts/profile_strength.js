@@ -1,5 +1,5 @@
 $(function () {
-  var canvas, ctx, doughnutData, doughnutOptions, myNewChart, percentage;
+  var canvas, ctx, doughnutData, doughnutOptions, percentage;
 
   doughnutOptions = {
     segmentShowStroke: true,

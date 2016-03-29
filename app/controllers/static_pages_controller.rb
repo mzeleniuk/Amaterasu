@@ -4,11 +4,16 @@ class StaticPagesController < ApplicationController
   def home
     if signed_in?
       @micropost = current_user.microposts.build
-      @feed_items = current_user.feed.paginate(page: params[:page], per_page: 15)
+      @feed_items = current_user.feed.paginate(page: params[:page], per_page: 8)
     end
 
     if params[:set_locale]
       redirect_to root_path(locale: params[:set_locale])
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 

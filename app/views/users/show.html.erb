@@ -35,6 +35,8 @@
       <%= render @microposts %>
     </ol>
 
-    <%= will_paginate @microposts %>
+    <div id="infinite-scroll">
+      <%= will_paginate @microposts %>
+    </div>
   </div>
 </div>
