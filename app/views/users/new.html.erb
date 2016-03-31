@@ -8,7 +8,7 @@
       <%= render 'shared/error_messages', object: f.object %>
 
       <%= f.label :first_name, t('.first_name_html') %>
-      <%= f.text_field :first_name, placeholder: 'Example', maxlength: 25 %>
+      <%= f.text_field :first_name, placeholder: 'Example', maxlength: 25, autofocus: true %>
 
       <%= f.label :last_name, t('.last_name_html') %>
       <%= f.text_field :last_name, placeholder: 'User', maxlength: 25 %>

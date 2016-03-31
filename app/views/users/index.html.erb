@@ -22,7 +22,9 @@
     <%= render @users %>
   </ul>
 
-  <%= will_paginate %>
+  <div id="infinite-scroll">
+    <%= will_paginate @users %>
+  </div>
 </div>
 
 <% if @users.blank? %>
