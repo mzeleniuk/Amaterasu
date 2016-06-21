@@ -8,6 +8,8 @@ class UserMailer < ActionMailer::Base
 
   def password_reset(user)
     @user = user
+    attachments.inline['logo.png'] = File.read("#{Rails.root}/app/assets/images/Logo_dark.png")
+
     mail to: user.email, subject: 'Amaterasu - Password reset'
   end
 
