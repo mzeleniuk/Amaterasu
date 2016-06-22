@@ -26,6 +26,8 @@ gem 'codeclimate-test-reporter', group: :test, require: nil
 # Bootstrap DateTime picker
 gem 'bootstrap-datepicker-rails'
 
+gem 'roadie-rails', '~> 1.1'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console'

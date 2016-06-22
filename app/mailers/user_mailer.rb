@@ -1,4 +1,6 @@
 class UserMailer < ActionMailer::Base
+  include Roadie::Rails::Automatic
+
   default from: 'noreply@amaterasu.com'
 
   def account_activation(user)
@@ -16,5 +18,11 @@ class UserMailer < ActionMailer::Base
   def welcome_email(user)
     @user = user
     mail to: user.email, subject: 'Welcome to Amaterasu!'
+  end
+
+  private
+
+  def roadie_options
+    super unless Rails.env.test?
   end
 end
