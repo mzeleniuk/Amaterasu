@@ -5,6 +5,8 @@ class UserMailer < ActionMailer::Base
 
   def account_activation(user)
     @user = user
+    attachments.inline['logo.png'] = File.read("#{Rails.root}/app/assets/images/Logo_dark.png")
+
     mail to: user.email, subject: 'Amaterasu - Account activation'
   end
 

@@ -3,3 +3,7 @@ Hi, <%= @user.full_name %>!
 Welcome to Amaterasu! Click on the link below to activate your account:
 
 <%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
+
+Once your account is activated you'll get unlimited access to features.
+
+If you didn't signed up to Amaterasu just ignore this email. Probably someone just typed wrong email address.
