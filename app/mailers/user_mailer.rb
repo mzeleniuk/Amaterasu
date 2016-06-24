@@ -19,6 +19,8 @@ class UserMailer < ActionMailer::Base
 
   def welcome_email(user)
     @user = user
+    attachments.inline['logo.png'] = File.read("#{Rails.root}/app/assets/images/Logo_dark.png")
+
     mail to: user.email, subject: 'Welcome to Amaterasu!'
   end
 
