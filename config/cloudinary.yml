@@ -1,19 +1,19 @@
 ---
 development:
-  cloud_name: hs92tsnsc
-  api_key: '491454175212467'
-  api_secret: fdviYKTmafl_bFN_lQMzELN3C44
+  cloud_name: ENV['CLOUDINARY_CLOUD_NAME']
+  api_key: ENV['CLOUDINARY_API_KEY']
+  api_secret: ENV['CLOUDINARY_API_SECRET']
   enhance_image_tag: true
   static_image_support: false
 production:
-  cloud_name: hs92tsnsc
-  api_key: '491454175212467'
-  api_secret: fdviYKTmafl_bFN_lQMzELN3C44
+  cloud_name: ENV['CLOUDINARY_CLOUD_NAME']
+  api_key: ENV['CLOUDINARY_API_KEY']
+  api_secret: ENV['CLOUDINARY_API_SECRET']
   enhance_image_tag: true
   static_image_support: true
 test:
-  cloud_name: hs92tsnsc
-  api_key: '491454175212467'
-  api_secret: fdviYKTmafl_bFN_lQMzELN3C44
+  cloud_name: ENV['CLOUDINARY_CLOUD_NAME']
+  api_key: ENV['CLOUDINARY_API_KEY']
+  api_secret: ENV['CLOUDINARY_API_SECRET']
   enhance_image_tag: true
   static_image_support: false
