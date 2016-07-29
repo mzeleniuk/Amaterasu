@@ -1,79 +1,91 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Not found</title>
 
-  <title>404 - Not found</title>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700&lang=en" rel="stylesheet">
 
-  <link href="//fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700&lang=en" rel="stylesheet">
+    <style>
+      body {
+        font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background-color: #2f4050;
+        font-size: 13px;
+        color: #676a6c;
+        overflow-x: hidden;
+        line-height: 1.42857143;
+      }
 
-  <style>
-    body {
-      font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background-color: #2f4050;
-      font-size: 13px;
-      color: #676a6c;
-      overflow-x: hidden;
-      line-height: 1.42857143;
-    }
+      .gray-bg {
+        background-color: #f3f3f4;
+      }
 
-    .animated {
-      -webkit-animation-duration: 1s;
-      animation-duration: 1s;
-      -webkit-animation-fill-mode: both;
-      animation-fill-mode: both;
-      z-index: 100;
-    }
+      .middle-box {
+        max-width: 400px;
+        z-index: 100;
+        margin: 0 auto;
+        padding-top: 40px;
+      }
 
-    .fadeInDown {
-      -webkit-animation-name: fadeInDown;
-      animation-name: fadeInDown;
-    }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: inherit;
+        font-weight: 100;
+        line-height: 0.1;
+        color: inherit;
+      }
 
-    .gray-bg {
-      background-color: #f3f3f4;
-    }
+      .middle-box h1 {
+        font-size: 170px;
+      }
 
-    .middle-box {
-      max-width: 400px;
-      z-index: 100;
-      margin: 0 auto;
-      padding-top: 40px;
-    }
+      .font-bold {
+        font-weight: 600;
+      }
 
-    h1, h2, h3, h4, h5, h6 {
-      font-family: inherit;
-      font-weight: 100;
-      line-height: 0.1;
-      color: inherit;
-    }
+      .text-center {
+        text-align: center;
+      }
 
-    .middle-box h1 {
-      font-size: 170px;
-    }
+      .button {
+        background-color: transparent;
+        transition: all .5s;
+        border: 1px solid #1C84C6;
+        color: #1C84C6;
+        min-width: 120px;
+        border-radius: 3px;
+        margin-top: 20px;
+        padding: 6px 12px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.4;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+      }
 
-    .font-bold {
-      font-weight: 600;
-    }
+      .button:hover, .button:focus {
+        background-color: #1A7BB9;
+        border-color: #1A7BB9;
+        color: #FFFFFF;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      }
+    </style>
+  </head>
 
-    .text-center {
-      text-align: center;
-    }
-  </style>
-</head>
+  <body class="gray-bg">
+    <div class="middle-box text-center">
+      <h1>404</h1>
 
-<body class="gray-bg">
-  <div class="middle-box text-center animated fadeInDown">
-    <h1>404</h1>
+      <h3 class="font-bold">Page Not Found</h3>
 
-    <h3 class="font-bold">Page Not Found</h3>
+      <div class="error-desc">
+        Sorry, but the page you are looking for is not found. Try checking the URL for error, then hit the
+        refresh button on your browser or try to find something else in our App.
+      </div>
 
-    <div class="error-desc">
-      Sorry, but the page you are looking for is not found. Try checking the URL for error, then hit the
-      refresh button on your browser or try to find something else in our App.
+      <button class="button" title="Back in your browser history" onclick="history.go(-1);">⇦ Back</button>
     </div>
-  </div>
-</body>
+  </body>
 </html>
