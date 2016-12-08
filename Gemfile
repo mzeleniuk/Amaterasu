@@ -35,15 +35,18 @@ group :development, :test do
   gem 'test-unit'
   gem 'rspec-rails'
   gem 'childprocess'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '~> 2.53'
   gem 'capybara'
   gem 'libnotify'
-  gem 'factory_girl_rails'
-  gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
+  gem 'factory_girl_rails', '~> 4.7'
 
   # Mailer preview
   gem 'letter_opener'
+end
+
+group :test do
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner', '~> 1.5'
 end
 
 group :doc do
