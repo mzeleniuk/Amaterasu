@@ -33,7 +33,7 @@ group :development, :test do
   gem 'web-console'
   gem 'spring'
   gem 'test-unit'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.5'
   gem 'childprocess'
   gem 'selenium-webdriver', '~> 2.53'
   gem 'capybara'
