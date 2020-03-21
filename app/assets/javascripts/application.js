@@ -18,10 +18,8 @@
 //= require idle-timer/idle-timer.min.js
 //= require sweet-alert/sweetalert.min
 //= require Chart/Chart.min.js
-//= require bootstrap-datepicker
 //= require bootstrap-datepicker/core
-//= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
-//= require bootstrap-datepicker/locales/bootstrap-datepicker.fr.js
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.ua.js
 //= require Counter-Up/jquery.counterup.min
 //= require waypoints/jquery.waypoints.min
 //= require_tree .

@@ -9,7 +9,7 @@ class AccountActivationsController < ApplicationController
       flash[:success] = t(:account_activated)
       redirect_to user
 
-      UserMailer.welcome_email(user).deliver
+      UserMailer.welcome_email(user).deliver_now
     else
       flash[:danger] = t(:invalid_activation_link)
       redirect_to root_url

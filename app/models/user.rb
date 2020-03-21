@@ -75,7 +75,7 @@ class User < ActiveRecord::Base
   end
 
   def send_activation_email
-    UserMailer.account_activation(self).deliver
+    UserMailer.account_activation(self).deliver_now
   end
 
   def create_reset_digest
@@ -85,7 +85,7 @@ class User < ActiveRecord::Base
   end
 
   def send_password_reset_email
-    UserMailer.password_reset(self).deliver
+    UserMailer.password_reset(self).deliver_now
   end
 
   def password_reset_expired?
@@ -124,7 +124,7 @@ class User < ActiveRecord::Base
 
   def self.search(search)
     if search
-      find(:all, conditions: ["first_name || ' ' || last_name LIKE ?", "%#{search}%"])
+      where("first_name || ' ' || last_name like :s", :s => "%#{search}")
     else
       all
     end
