@@ -4,12 +4,6 @@ require 'cucumber/rails'
 require 'cucumber/rspec/doubles'
 require 'simplecov'
 
-# Save to CircleCI's artifacts directory if we're on CircleCI
-if ENV['CIRCLE_ARTIFACTS']
-  dir = File.join(ENV['CIRCLE_ARTIFACTS'], 'coverage')
-  SimpleCov.coverage_dir(dir)
-end
-
 SimpleCov.start
 
 ActionController::Base.allow_rescue = false
@@ -37,20 +31,3 @@ end
 Capybara.javascript_driver = :chrome
 
 Capybara.default_wait_time = 15
-
-# Take a screenshot when any of Cucumber's scenario failed.
-# http://vumanhcuongit.github.io/testing/2016/01/26/take-screenshot-when-cucumber-test-failed
-SCREENSHOT_FOLDER = File.join ENV.fetch('CIRCLE_ARTIFACTS', Rails.root.join('tmp')), 'cucumber_screenshot'
-
-AfterConfiguration do
-  FileUtils.rm_rf SCREENSHOT_FOLDER
-end
-
-After do |scenario|
-  if scenario.failed?
-    timestamp = "#{Time.zone.now.strftime('%Y-%m-%d, %H:%M:%S')}"
-    screenshot_name = "#{scenario.title} screenshot (#{timestamp}).png"
-
-    Capybara.page.save_screenshot File.join(SCREENSHOT_FOLDER, screenshot_name)
-  end
-end

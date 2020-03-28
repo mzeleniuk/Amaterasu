@@ -21,7 +21,6 @@ gem 'sprockets'
 
 # Code coverage
 gem 'simplecov', require: false, group: :test
-gem 'codeclimate-test-reporter', '0.6.0', group: :test, require: nil
 
 # Bootstrap DateTime picker
 gem 'bootstrap-datepicker-rails', '1.9.0.1'
